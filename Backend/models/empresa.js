@@ -4,7 +4,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var EmpresaSchema = Schema({
-  nombre: String,
+  razonSocial: String,
   nit: Number,
   password: String
 });

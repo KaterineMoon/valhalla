@@ -1,6 +1,5 @@
 "use strict";
 
-//trabajar con ficheros
 var fs = require("fs");
 var path = require("path");
 
