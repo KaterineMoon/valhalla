@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentsComponent } from './componentes/components.component';
-import { ProfileComponent } from './examples/profile/profile.component';
-import { SignupComponent } from './examples/signup/signup.component';
-import { LandingComponent } from './examples/landing/landing.component';
+import { ComponentsModule } from './componentes/components.module'
+import { ProfileComponent } from './componentes/profile/profile.component';
+import { SignupComponent } from './componentes/signup/signup.component';
+import { LandingComponent } from './componentes/landing/landing.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'afiliate', component: ComponentsModule},
   { path: 'home', component: ComponentsComponent },
   { path: 'user-profile', component: ProfileComponent },
   { path: 'signup', component: SignupComponent },
@@ -20,9 +22,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes, {
-      useHash: true
-    })
+    RouterModule.forRoot(routes)
   ],
   exports: [
   ],
