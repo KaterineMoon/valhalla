@@ -6,7 +6,7 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
 
-import { AfiliacionComponent } from './afiliacion/afiliacion.component'
+/*import { AfiliacionComponent } from './afiliacion/afiliacion.component'
 import { CesantiasComponent } from './cesantias/cesantias.component'
 import { DescargasComponent } from './descargas/descargas.component'
 import { InformacionEmpleadoComponent } from './informacion-empleado/informacion-empleado.component'
@@ -20,7 +20,7 @@ import { RegistroEmpleadoComponent } from './registro-empleado/registro-empleado
 import { RegistroEmpresaComponent } from './registro-empresa/registro-empresa.component'
 import { ResumenCesantiasComponent } from './resumen-cesantias/resumen-cesantias.component'
 import { ResumenPensionComponent } from './resumen-pension/resumen-pension.component'
-import { SolicitudRetiroComponent } from './solicitud-retiro/solicitud-retiro.component'
+import { SolicitudRetiroComponent } from './solicitud-retiro/solicitud-retiro.component'*/
 import { ComponentsComponent } from './components.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
@@ -36,7 +36,7 @@ import { NgbdModalContent } from './modal/modal.component';
         JwBootstrapSwitchNg2Module
     ],
     declarations: [
-        AfiliacionComponent,
+        /*AfiliacionComponent,
         CesantiasComponent,
         DescargasComponent,
         InformacionEmpleadoComponent,
@@ -50,7 +50,7 @@ import { NgbdModalContent } from './modal/modal.component';
         RegistroEmpresaComponent,
         ResumenCesantiasComponent,
         ResumenPensionComponent,
-        SolicitudRetiroComponent,
+        SolicitudRetiroComponent,*/
         ComponentsComponent,
         NgbdModalComponent,
         NgbdModalContent
