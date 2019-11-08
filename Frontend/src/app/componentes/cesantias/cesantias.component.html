@@ -56,12 +56,12 @@
     </p>
 
     <div>
-      <form class="form-group">
+      <form class="form-group" (ngSubmit)="calcular()" #f="ngForm">
         <div class="row">
           <div class="col-md-2">
             <label>Fecha Ingreso</label>
             <div class="input-group date" [ngClass]="{'input-group-focus':focus===true}">
-              <input class="form-control" placeholder="YYYY-MM-DD" name="dp" [(ngModel)]="model" ngbDatepicker
+              <input class="form-control" placeholder="YYYY-MM-DD" name="fechaInicial" [(ngModel)]="calculadora.fechaInicial" ngbDatepicker
                 #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true" (blur)="focus=false" />
               <div class="input-group-append">
                 <span class="glyphicon glyphicon-calendar input-group-text">
@@ -73,8 +73,8 @@
           <div class="col-md-2">
             <label>Fecha Retiro</label>
             <div class="input-group date" [ngClass]="{'input-group-focus':focus===true}">
-              <input class="form-control" placeholder="YYYY-MM-DD" name="dp" [(ngModel)]="model" ngbDatepicker
-                #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true" (blur)="focus=false" />
+              <input class="form-control" placeholder="YYYY-MM-DD" name="fechaFinal" [(ngModel)]="calculadora.fechaFinal" ngbDatepicker
+                #e="ngbDatepicker" (click)="e.toggle()" (focus)="focus=true" (blur)="focus=false" />
               <div class="input-group-append">
                 <span class="glyphicon glyphicon-calendar input-group-text">
                   <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -84,14 +84,14 @@
           </div>
           <div class="col-md-2">
             <label>Salario</label>
-            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="$">
+            <input type="number" class="form-control" name="salario" [(ngModel)]="calculadora.salario" placeholder="$">
           </div>
           <div class="col-md-2">
             <label>Cesantías</label>
-            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="$" readonly>
+            <input type="number" class="form-control" name="cesantias" [(ngModel)]="calculadora.cesantias" placeholder="$" readonly>
           </div>
-          <div class="col-md-2">
-              <button class="pt-2 btn btn-danger btn-fill">Calcular</button>
+          <div class="py-2 col-md-2">
+              <button class="pt-1 mt-4 btn btn-danger btn-fill">Calcular</button>
           </div>
         </div>
       </form>
