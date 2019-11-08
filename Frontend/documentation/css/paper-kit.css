@@ -456,8 +456,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .btn-success {
-  background-color: #6bd098;
-  border-color: #6bd098;
+/* background-color: #6bd098; */
+  border-color: #26ff00;
   color: #FFFFFF;
   opacity: 1;
   filter: alpha(opacity=100);
