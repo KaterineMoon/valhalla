@@ -11,21 +11,13 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './componentes/components.module';
 import { ExamplesModule } from './examples/examples.module';
-import { MainContentComponent } from './componentes/main-content/main-content.component';
-import { CesantiasComponent } from './componentes/cesantias/cesantias.component';
-import { InversionComponent } from './componentes/inversion/inversion.component';
-import { PensionComponent } from './componentes/pension/pension.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
-    MainContentComponent,
-    CesantiasComponent,
-    InversionComponent,
-    PensionComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
