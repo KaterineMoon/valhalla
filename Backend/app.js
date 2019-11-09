@@ -5,7 +5,6 @@ var bodyParser = require("body-parser");
 
 var app = express();
 var empleado_routes = require("./routes/empleado");
-var empresa_routes = require("./routes/empresa");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -30,6 +29,5 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", empleado_routes);
-app.use("/api", empresa_routes);
 
 module.exports = app;
