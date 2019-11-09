@@ -24,7 +24,6 @@ import { SolicitudRetiroComponent } from './solicitud-retiro/solicitud-retiro.co
 import { ComponentsComponent } from './components.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
-import { FormularioComponent } from './formulario/formulario.component';
 
 
 @NgModule({
@@ -54,8 +53,7 @@ import { FormularioComponent } from './formulario/formulario.component';
         SolicitudRetiroComponent,*/
         ComponentsComponent,
         NgbdModalComponent,
-        NgbdModalContent,
-        FormularioComponent
+        NgbdModalContent
     ],
     entryComponents: [NgbdModalContent],
     exports: [ComponentsComponent]
