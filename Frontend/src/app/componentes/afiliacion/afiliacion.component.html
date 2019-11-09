@@ -1,3 +1,28 @@
-<p>
-  afiliacion works!
-</p>
+<div class="col-5">
+  <form #loginForm="ngForm" 
+  (ngSubmit)="registrar()" ngNativeValidate>
+      <h1>Quieres afiliarte ?</h1>
+      <br>
+      <p>Nombre:</p>
+      <input type="text" class="form-control" 
+      #nombre="ngModel" name="nombre" 
+      [(ngModel)]="usuario.nombre"
+          required>
+      <p>Edad:</p>
+      <input type="text" class="form-control" name="edad" #edad="ngModel" [(ngModel)]="usuario.edad" required>
+      <p>Correo:</p>
+      <input type="email" class="form-control" #correo="ngModel" name="correo" [(ngModel)]="usuario.correo"
+          required>
+      <p>Password:</p>
+      <input type="password" class="form-control" #password="ngModel" name="password"
+          [(ngModel)]="usuario.password" required>
+      <br>
+      <button type="submit" 
+      class="btn btn-light">Recibir informacion</button>
+      <br><br>
+      <div *ngIf="registroCorrecto" 
+      class="alert alert-danger">
+          {{registroCorrecto}}
+      </div>
+  </form>
+</div>
