@@ -48,12 +48,12 @@ function loginEmpleado(req, res) {
       console.log(err);
       res.status(500).send({ message: "Error en el servidor" });
     } else {
-      if (!usuario) {
+      if (!empleado) {
         res
           .status(400)
           .send({ message: "El usuario con esta cédula no existe" });
       } else {
-        if (usuario.password != password) {
+        if (empleado.password != password) {
           res.status(400).send({ message: "Contraseña incorrecta" });
         } else {
           res.status(200).send({ empleado: empleado });
