@@ -18,7 +18,7 @@ function crearEmpresa(req, res) {
       res.status(500).send({ message: "Error en el servidor" });
     } else {
       if (!empresaCreada) {
-        res.status(200).send({ message: "No se ha guardado la empresa" });
+        res.status(400).send({ message: "No se ha guardado la empresa" });
       } else {
         res.status(200).send({
           empresa: empresaCreada
@@ -41,11 +41,11 @@ function loginEmpresa(req, res) {
     } else {
       if (!empresa) {
         res
-          .status(200)
+          .status(400)
           .send({ message: "Este nit no existe en la base de datos" });
       } else {
         if (empresa.password != password) {
-          res.status(200).send({ message: "Contraseña incorrecta" });
+          res.status(400).send({ message: "Contraseña incorrecta" });
         } else {
           res.status(200).send({ empresa: empresa });
         }

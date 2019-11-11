@@ -9,7 +9,6 @@ import { DescargasComponent } from './componentes/descargas/descargas.component'
 import { InformacionEmpleadoComponent } from './componentes/informacion-empleado/informacion-empleado.component';
 import { InformacionEmpresaComponent } from './componentes/informacion-empresa/informacion-empresa.component';
 import { InversionComponent } from './componentes/inversion/inversion.component';
-import { ListaEmpleadoComponent } from './componentes/lista-empleado/lista-empleado.component';
 import { ListaEmpleadosComponent } from './componentes/lista-empleados/lista-empleados.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { MainContentComponent } from './componentes/main-content/main-content.component';
@@ -29,7 +28,6 @@ import { SolicitudRetiroComponent } from './componentes/solicitud-retiro/solicit
     InformacionEmpleadoComponent,
     InformacionEmpresaComponent,
     InversionComponent,
-    ListaEmpleadoComponent,
     ListaEmpleadosComponent,
     LoginComponent,
     MainContentComponent,

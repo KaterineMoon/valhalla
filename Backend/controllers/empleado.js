@@ -25,8 +25,8 @@ function crearEmpleado(req, res) {
     if (error) {
       res.status(500).send({ message: "Error en el servidor" });
     } else {
-      if (!usuarioCreado) {
-        res.status(200).send({ message: "No se ha guardado el usuario" });
+      if (!empleadoCreado) {
+        res.status(400).send({ message: "No se ha guardado el usuario" });
       } else {
         res.status(200).send({
           empleado: empleadoCreado
@@ -49,11 +49,11 @@ function loginEmpleado(req, res) {
     } else {
       if (!usuario) {
         res
-          .status(200)
+          .status(400)
           .send({ message: "El usuario con esta cédula no existe" });
       } else {
         if (usuario.password != password) {
-          res.status(200).send({ message: "Contraseña incorrecta" });
+          res.status(400).send({ message: "Contraseña incorrecta" });
         } else {
           res.status(200).send({ empleado: empleado });
         }
@@ -62,7 +62,24 @@ function loginEmpleado(req, res) {
   });
 }
 
+function actualizarPersona(req, res){
+  var idPersona = req.params.id;
+  var params = req.body;
+  Empleado.findByIdAndUpdate(idPersona, params, (err, empleadoActualizado) => {
+    if(err) {
+      res.status(500).send({ message : "Error en el servidor"})
+    } else {
+      if(!empleadoActualizado) {
+        res.status(400).send({ message: "No se puede actualizar el usuario"})
+      } else{
+        res.status(200).send({ empleado: empleadoActualizado})
+      }
+    }
+  })
+}
+
 module.exports = {
   crearEmpleado,
-  loginEmpleado
+  loginEmpleado,
+  actualizarPersona
 };
