@@ -10,7 +10,7 @@
     <p>Cédula</p>
     <input type="text" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula" required>
     <small id="emailHelp" class="form-text text-muted">Ingrese solamente los números. No incluya puntos ni
-      espacios</small><br>
+      espacios.</small><br>
     <p>Contraseña</p>
     <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empleado.password"
       required><br>
@@ -30,25 +30,23 @@
     <p>Afiliación a Pensiones</p>
     <select type="text" class="form-control" #afiliacionPensiones="ngModel" name="afiliacionPensiones"
       [(ngModel)]="empleado.afiliacionPensiones" required><br>
-      <option>Seleccione una opción</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option>Colfondos</option>
+      <option>Porvenir</option>
+      <option>Protección</option>
+      <option>Skandia</option>
     </select><br>
     <p>Afiliación a Cesantías</p>
     <select type="text" class="form-control" #afiliacionCesantias="ngModel" name="afiliacionCesantias"
       [(ngModel)]="empleado.afiliacionCesantias" required><br>
-      <option>Seleccione una opción</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option>Colfondos</option>
+      <option>Porvenir</option>
+      <option>Protección</option>
+      <option>Skandia</option>
     </select><br>
     <input type="checkbox" name="vehicle1" value="Bike" required> Acepto los términos y condiciones de Valhalla y la Política de
     Privacidad<br><br>
     <button type="submit" class="btn btn-primary">Registrarse</button><br><br>
-    <div *ngIf="registroCorrecto" class="alert alert-danger">
+    <div *ngIf="registroCorrecto" class="alert alert-primary">
       {{registroCorrecto}}
     </div>
   </form>
