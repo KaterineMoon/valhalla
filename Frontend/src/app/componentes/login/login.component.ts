@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Empleado } from 'src/app/modelos/empleado';
-import { Empresa } from 'src/app/modelos/empresa';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Empleado } from '../../modelos/empleado';
+// import { Empresa } from 'src/app/modelos/empresa';
 import { HttpClientService } from '../../servicios/http-client.service';
-import { ServicioEmpresaService } from '../../servicios/servicio-empresa.service';
+// import { ServicioEmpresaService } from '../../servicios/servicio-empresa.service';
+import { ServicioCompartidoService } from '../../servicios/servicio-compartido.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
@@ -12,31 +13,27 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 
 export class LoginComponent implements OnInit {
-  constructor() {
-  }
-  ngOnInit() {
-  }
-  /*empleado: Empleado;
-  empresa: Empresa;
+  empleado: Empleado;
+  // empresa: Empresa;
   loginCorrecto;
 
   constructor(
     private _httpClientService: HttpClientService,
     private _router: Router,
     private _compartidoService: ServicioCompartidoService,
-    private _empresaService: ServicioEmpresaService
+    // private _empresaService: ServicioEmpresaService
   ) {
     if(localStorage.getItem("sesion") != null){
-      this._router.navigate(['/menu']);
+      this._router.navigate(['/perfil-empleado']);
     }
     this.empleado = new Empleado('', '', '', null, '', '', '', '', '', '', '', '', '');
-    this.empresa = new Empresa('', '', null, '', '');
+    // this.empresa = new Empresa('', '', null, '', '');
   }
 
   ngOnInit() {
   }
 
-  loginEmpleado() {
+  login() {
     this._httpClientService.login(this.empleado).subscribe(
       (response: any) => {
         if (response.empleado) {
@@ -58,7 +55,7 @@ export class LoginComponent implements OnInit {
             
             localStorage.setItem("sesion",JSON.stringify(empleadoLogueado));
             this._compartidoService.emitirLogueo(true);
-            this._router.navigate(['/menu'])
+            this._router.navigate(['/perfil-empleado'])
             
         } else {
           this.loginCorrecto = "Los datos ingresados son incorrectos. Pruebe nuevamente.";
@@ -70,7 +67,7 @@ export class LoginComponent implements OnInit {
       }
     )
   }
-
+/*
   loginEmpresa() {
     this._empresaService.login(this.empresa).subscribe(
       (response: any) => {

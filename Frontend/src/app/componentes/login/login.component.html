@@ -3,7 +3,7 @@
         <br>
         <h1>Ingreso de Empleados</h1><br>
         <p>Cédula</p>
-        <input type="text" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula"
+        <input type="text" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula" 
             required><br>
         <p>Contraseña</p>
         <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empleado.password"
@@ -13,7 +13,7 @@
             {{loginCorrecto}}
         </div>
     </form>
-    <form class="col-6">
+    <!-- <form class="col-6">
         <br>
         <h1>Ingreso de Empresas</h1><br>
         <p>NIT</p>
@@ -25,5 +25,5 @@
         <div *ngIf="loginCorrecto" class="alert alert-danger">
             {{loginCorrecto}}
         </div>
-    </form>
+    </form> -->
 </div>
