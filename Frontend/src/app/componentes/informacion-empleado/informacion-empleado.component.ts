@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { Empleado } from 'src/app/modelos/empleado';
 import { HttpClientService } from '../../servicios/http-client.service';
 
@@ -14,7 +14,7 @@ export class InformacionEmpleadoComponent implements OnInit {
 
   constructor(
     private _httpClientService: HttpClientService
-  ) { }
+  ) { }  
 
   ngOnInit() {
     this.persona = JSON.parse(localStorage.getItem("sesion"))

@@ -1,1 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+
+.aText {
+    color: #ffffff !important;
+}
+
+.aText:hover  {
+    color: #bec4c9 !important;
+}
+.navColor {
+    background-color: rgba(0, 0, 20, 0);
+    -webkit-box-shadow:0px 1px 1px #bec4c9; 
+    -moz-box-shadow:0px 1px 1px #bec4c9; 
+    box-shadow:0px 2px 2px #35343423;
+    transition: all 1s ease; 
+
+}
+
+.navColorFull{
+    background-color:#073b6d;
+    -webkit-box-shadow:0px 1px 1px #bec4c9; 
+    -moz-box-shadow:0px 1px 1px #bec4c9; 
+    box-shadow:0px 1px 1px #3f3f3f;;
+}
+
+.linkColor {
+    color: #ffffff;
+}
+
+.titulo {
+    font-size: 2rem !important;
+    color: #a8a8a8 !important;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.cardFondo{
+ background: transparent !important;
+ border: none !important;
+}
+
+body{
+    background-color: rgb(233, 233, 233) !important;
+ 
+}
+
+.aTextNews{
+    color: #282828 !important;
+    text-decoration-line: none !important;
+    
+}
+.aTextNews:hover{
+    color: #696969 !important;
+    text-decoration-line: none !important;
+}
+
+.footerColor {
+    margin-top: 10px !important;
+    background-color: #48bd32 !important;
+    color: #fff !important;
+}
+.footerColorCopy {
+    background-color: #2d861d !important;
+}
+.infoRelevante{
+    color: #073b6d !important;
+}
+
+.aColorF {
+    color: #073b6d !important;
+    text-decoration-line: none !important;
+    
+}
+
+.aColorF:hover  {
+    color: #006dd3 !important;
+    text-decoration-line: none !important;
+}
+
+.aTextR {
+    color: #ffffff !important;
+    font-size: 15px !important;
+}
+
+.aTextR:hover  {
+    color: #bec4c9 !important;
+}
+
+@keyframes latidos {
+    from { transform: none; }
+    50% { transform: scale(1.4); }
+    to { transform: none; }
+}
+
+.corazon {
+	display: inline-block;
+	font-size: 15px;
+	color: #9562ff;
+	animation: latidos .5s infinite;
+	transform-origin: center;
+}

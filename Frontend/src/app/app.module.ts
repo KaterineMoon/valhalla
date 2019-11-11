@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,8 @@ import { RegistroEmpresaComponent } from './componentes/registro-empresa/registr
 import { ResumenCesantiasComponent } from './componentes/resumen-cesantias/resumen-cesantias.component';
 import { ResumenPensionComponent } from './componentes/resumen-pension/resumen-pension.component';
 import { SolicitudRetiroComponent } from './componentes/solicitud-retiro/solicitud-retiro.component';
+import { HeaderComponent } from './componentes/header/header.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +40,15 @@ import { SolicitudRetiroComponent } from './componentes/solicitud-retiro/solicit
     RegistroEmpresaComponent,
     ResumenCesantiasComponent,
     ResumenPensionComponent,
-    SolicitudRetiroComponent
+    SolicitudRetiroComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

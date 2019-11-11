@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms';
 
 class Calculadora {
   fechaInicial: any;
