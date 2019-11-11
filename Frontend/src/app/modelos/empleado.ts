@@ -1,10 +1,18 @@
 export class Empleado {
 
     constructor(
-        public _id:string,
+        public _id: String,
         public nombre: String,
+        public apellido: String,
+        public cedula: Number,
+        public password: String,
+        public edad: String,
         public empresa: String,
-        public salario: Number,
-        public cargo: String
+        public fechaIngreso: String,
+        public salario: String,
+        public cargo: String,
+        public afiliacionPensiones: String,
+        public afiliacionCesantias: String,
+        public role: String
     ){}
 }

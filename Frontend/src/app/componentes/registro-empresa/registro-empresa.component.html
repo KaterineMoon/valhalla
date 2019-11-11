@@ -1,1 +1,21 @@
-<p>registro-empresa works!</p>
+<div class="row container-fluid">
+  <form class="col-6" #f="ngForm" (ngSubmit)="registrar()" ngNativeValidate>
+    <br>
+    <h1>Registro de Empresa</h1><br>
+    <p>Razón Social</p>
+    <input type="text" class="form-control" #razonSocial="ngModel" name="razonSocial" [(ngModel)]="empresa.razonSocial"
+      required><br>
+    <p>NIT</p>
+    <input type="text" class="form-control" #nit="ngModel" name="nit" [(ngModel)]="empresa.nit" required>
+    <small id="emailHelp" class="form-text text-muted">Ingrese solamente los números. No incluya puntos ni
+      espacios</small><br>
+    <p>Contraseña</p>
+    <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empresa.password"
+      required><br>
+    <input type="checkbox" name="vehicle1" value="Bike" required> Acepto los términos y condiciones de Valhalla y la Política de
+    Privacidad<br><br>
+    <button type="submit" class="btn btn-primary">Registrarse</button><br><br>
+    <div *ngIf="registroCorrecto" class="alert alert-danger">
+      {{registroCorrecto}}
+    </div>
+  </form>

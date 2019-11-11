@@ -18,6 +18,31 @@ export class HttpClientService {
   ngOnInit() {
   }
 
+  registrar(empleado) {
+    let params = JSON.stringify(empleado);
+    let options = {
+      headers: new HttpHeaders(
+        { 'Content-Type': 'application/json' })};
+    return this._http.post(
+      this.url + "empleado",
+      params,
+      options
+    ).pipe(map(res => res));
+  }
+
+  login(empleado) {
+    let params = JSON.stringify(empleado);
+    let options = {
+      headers: new HttpHeaders(
+        { 'Content-Type': 'application/json' })
+    };
+    return this._http.post(
+      this.url + "empleado-login",
+      params,
+      options
+    ).pipe(map(res => res));
+  }
+
   actualizar(id, persona){
     let params = JSON.stringify(persona);
     let options = {
