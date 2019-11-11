@@ -16,10 +16,11 @@ function crearEmpleado(req, res) {
   empleado.edad = params.edad;
   empleado.empresa = params.empresa;
   empleado.fechaIngreso = params.ingreso;
-  empleado.salario = params.salario;
   empleado.cargo = params.cargo;
+  empleado.salario = params.salario;
   empleado.afiliacionPensiones = params.afiliacionPensiones;
   empleado.afiliacionCesantias = params.afiliacionCesantias;
+  empleado.role = "ROLE_PERS";
 
   empleado.save((error, empleadoCreado) => {
     if (error) {

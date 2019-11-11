@@ -6,7 +6,8 @@ var Schema = mongoose.Schema;
 var EmpresaSchema = Schema({
   razonSocial: String,
   nit: Number,
-  password: String
+  password: String,
+  role: String
 });
 
 module.exports = mongoose.model("empresa", EmpresaSchema);

@@ -10,11 +10,12 @@ var EmpleadoSchema = Schema({
   password: String,
   edad: Number,
   empresa: String,
-  fechaIngreso: Date, //Para insertar datepicker en el front: https://es.stackoverflow.com/questions/99799/datepicker-en-bootstrap
-  salario: String,
+  fechaIngreso: Date,
   cargo: String,
+  salario: String,
   afiliacionPensiones: String,
-  afiliacionCesantias: String
+  afiliacionCesantias: String,
+  role: String
 });
 
 module.exports = mongoose.model("empleado", EmpleadoSchema);

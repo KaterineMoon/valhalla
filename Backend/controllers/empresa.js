@@ -12,6 +12,7 @@ function crearEmpresa(req, res) {
   empresa.razonSocial = params.razonSocial;
   empresa.nit = params.nit;
   empresa.password = params.password;
+  empresa.role = "ROLE_EMP";
 
   empresa.save((error, empresaCreada) => {
     if (error) {
@@ -34,7 +35,7 @@ function loginEmpresa(req, res) {
   var nit = params.nit;
   var password = params.password;
 
-  Empleado.findOne({ nit: nit.toLowerCase() }, (err, empresa) => {
+  Empresa.findOne({ nit: nit.toLowerCase() }, (err, empresa) => {
     if (err) {
       console.log(err);
       res.status(500).send({ message: "Error en el servidor" });
@@ -42,7 +43,7 @@ function loginEmpresa(req, res) {
       if (!empresa) {
         res
           .status(400)
-          .send({ message: "Este nit no existe en la base de datos" });
+          .send({ message: "Este NIT no existe en la base de datos" });
       } else {
         if (empresa.password != password) {
           res.status(400).send({ message: "Contraseña incorrecta" });
@@ -53,7 +54,26 @@ function loginEmpresa(req, res) {
     }
   });
 }
+
+function actualizarEmpresa(req, res){
+  var idEmpresa = req.params.id;
+  var params = req.body;
+  Empresa.findByIdAndUpdate(idEmpresa, params, (err, empresaActualizada) => {
+    if(err) {
+      res.status(500).send({ message : "Error en el servidor"})
+    } else {
+      if(!empresaActualizada) {
+        res.status(400).send({ message: "No se puede actualizar la empresa"})
+      } else{
+        res.status(200).send({ empresa: empresaActualizada})
+      }
+    }
+  })
+}
+
+
 module.exports = {
   crearEmpresa,
-  loginEmpresa
+  loginEmpresa,
+  actualizarEmpresa
 };
