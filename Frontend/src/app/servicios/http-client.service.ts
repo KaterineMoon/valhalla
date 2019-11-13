@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HttpClientService {
-  public persona : Empleado;
+  public empleado : Empleado;
   url = "http://localhost:3977/api/";
 
   constructor(
@@ -53,5 +53,15 @@ export class HttpClientService {
       params,
       options
     ).pipe(map(res => res));
+  }
+
+  obtener(id){
+    let options = {
+      headers: new HttpHeaders(
+        {'Content-Type': 'application/json'})};
+    return this._http.get(
+      this.url + 'usuario/' + id, 
+      options
+    ).pipe(map(res=>res))
   }
 }

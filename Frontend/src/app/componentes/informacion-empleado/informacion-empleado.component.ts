@@ -21,6 +21,15 @@ export class InformacionEmpleadoComponent implements OnInit {
     console.log(this.persona)
   }
 
+  obtener(){
+    this._httpClientService.obtener(this.persona._id).subscribe(
+      (response: any) => {
+        console.log(response)
+      }, err => {
+        console.log(err)
+      }
+    )
+  }
   actualizar(){
     this._httpClientService.actualizar(this.persona._id, this.persona).subscribe(
       (response : any ) => {
