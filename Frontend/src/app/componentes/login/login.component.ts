@@ -94,7 +94,7 @@ export class LoginComponent implements OnInit {
             response.empresa.razonSocial,
             response.empresa.nit,
             response.empresa.password,
-            response.empleado.role
+            response.empresa.role
           );
 
           localStorage.setItem("sesion", JSON.stringify(empresaLogueada));
