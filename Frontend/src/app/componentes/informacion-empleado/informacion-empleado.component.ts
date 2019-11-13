@@ -21,10 +21,12 @@ export class InformacionEmpleadoComponent implements OnInit {
     console.log(this.persona)
   }
 
+
   obtener(){
     this._httpClientService.obtener(this.persona._id).subscribe(
       (response: any) => {
         console.log(response)
+        
       }, err => {
         console.log(err)
       }
