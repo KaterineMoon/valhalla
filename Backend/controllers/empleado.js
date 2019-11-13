@@ -19,7 +19,9 @@ function crearEmpleado(req, res) {
   empleado.cargo = params.cargo;
   empleado.salario = params.salario;
   empleado.afiliacionPensiones = params.afiliacionPensiones;
+  empleado.saldoPensiones = params.saldoPensiones;
   empleado.afiliacionCesantias = params.afiliacionCesantias;
+  empleado.saldoCesantias = params.saldoCesantias;
   empleado.role = "ROLE_PERS";
 
   empleado.save((error, empleadoCreado) => {
@@ -43,7 +45,7 @@ function loginEmpleado(req, res) {
   var cedula = params.cedula;
   var password = params.password;
 
-  Empleado.findOne({ cedula: cedula.toLowerCase() }, (err, empleado) => {
+  Empleado.findOne({ cedula }, (err, empleado) => {
     if (err) {
       console.log(err);
       res.status(500).send({ message: "Error en el servidor" });
@@ -63,20 +65,20 @@ function loginEmpleado(req, res) {
   });
 }
 
-function actualizarPersona(req, res){
+function actualizarPersona(req, res) {
   var idPersona = req.params.id;
   var params = req.body;
   Empleado.findByIdAndUpdate(idPersona, params, (err, empleadoActualizado) => {
-    if(err) {
-      res.status(500).send({ message : "Error en el servidor"})
+    if (err) {
+      res.status(500).send({ message: "Error en el servidor" });
     } else {
-      if(!empleadoActualizado) {
-        res.status(400).send({ message: "No se puede actualizar el usuario"})
-      } else{
-        res.status(200).send({ empleado: empleadoActualizado})
+      if (!empleadoActualizado) {
+        res.status(400).send({ message: "No se puede actualizar el usuario" });
+      } else {
+        res.status(200).send({ empleado: empleadoActualizado });
       }
     }
-  })
+  });
 }
 
 module.exports = {
