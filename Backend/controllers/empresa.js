@@ -35,7 +35,7 @@ function loginEmpresa(req, res) {
   var nit = params.nit;
   var password = params.password;
 
-  Empresa.findOne({ nit: nit.toLowerCase() }, (err, empresa) => {
+  Empresa.findOne({ nit }, (err, empresa) => {
     if (err) {
       console.log(err);
       res.status(500).send({ message: "Error en el servidor" });
@@ -55,22 +55,21 @@ function loginEmpresa(req, res) {
   });
 }
 
-function actualizarEmpresa(req, res){
+function actualizarEmpresa(req, res) {
   var idEmpresa = req.params.id;
   var params = req.body;
   Empresa.findByIdAndUpdate(idEmpresa, params, (err, empresaActualizada) => {
-    if(err) {
-      res.status(500).send({ message : "Error en el servidor"})
+    if (err) {
+      res.status(500).send({ message: "Error en el servidor" });
     } else {
-      if(!empresaActualizada) {
-        res.status(400).send({ message: "No se puede actualizar la empresa"})
-      } else{
-        res.status(200).send({ empresa: empresaActualizada})
+      if (!empresaActualizada) {
+        res.status(400).send({ message: "No se puede actualizar la empresa" });
+      } else {
+        res.status(200).send({ empresa: empresaActualizada });
       }
     }
-  })
+  });
 }
-
 
 module.exports = {
   crearEmpresa,

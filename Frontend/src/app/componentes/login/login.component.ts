@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Empleado } from "../../modelos/empleado";
-// import { Empresa } from 'src/app/modelos/empresa';
+// import { Empresa } from "src/app/modelos/empresa";
 import { HttpClientService } from "../../servicios/http-client.service";
-// import { ServicioEmpresaService } from '../../servicios/servicio-empresa.service';
+// import { ServicioEmpresaService } from "../../servicios/servicio-empresa.service";
 import { ServicioCompartidoService } from "../../servicios/servicio-compartido.service";
 import { Router, ActivatedRoute, Params } from "@angular/router";
 
@@ -19,8 +19,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private _httpClientService: HttpClientService,
     private _router: Router,
-    private _compartidoService: ServicioCompartidoService // private _empresaService: ServicioEmpresaService
-  ) {
+    private _compartidoService: ServicioCompartidoService
+  ) // private _empresaService: ServicioEmpresaService
+  {
     if (localStorage.getItem("sesion") != null) {
       this._router.navigate(["/perfil-empleado"]);
     }
@@ -41,7 +42,7 @@ export class LoginComponent implements OnInit {
       null,
       ""
     );
-    // this.empresa = new Empresa('', '', null, '', '');
+    // this.empresa = new Empresa("", "", null, "", "");
   }
 
   ngOnInit() {}
@@ -83,8 +84,8 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-  /*
-  loginEmpresa() {
+
+  /*loginEmpresa() {
     this._empresaService.login(this.empresa).subscribe(
       (response: any) => {
         if (response.empresa) {
@@ -94,20 +95,21 @@ export class LoginComponent implements OnInit {
             response.empresa.nit,
             response.empresa.password,
             response.empleado.role
-          )
-            
-            localStorage.setItem("sesion",JSON.stringify(empresaLogueada));
-            this._compartidoService.emitirLogueo(true);
-            this._router.navigate(['/menu'])
-            
+          );
+
+          localStorage.setItem("sesion", JSON.stringify(empresaLogueada));
+          this._compartidoService.emitirLogueo(true);
+          this._router.navigate(["/perfil-empresa"]);
         } else {
-          this.loginCorrecto = "Los datos ingresados son incorrectos. Pruebe nuevamente.";
+          this.loginCorrecto =
+            "Los datos ingresados son incorrectos. Pruebe nuevamente.";
         }
-      }, error => {
+      },
+      error => {
         if (error != null) {
-          console.log(error)
+          console.log(error);
         }
       }
-    )
-}*/
+    );
+  }*/
 }
