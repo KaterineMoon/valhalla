@@ -14,7 +14,9 @@ var EmpleadoSchema = Schema({
   cargo: String,
   salario: String,
   afiliacionPensiones: String,
+  saldoPensiones: Number,
   afiliacionCesantias: String,
+  saldoCesantías: Number,
   role: String
 });
 

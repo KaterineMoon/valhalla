@@ -12,7 +12,9 @@ export class Empleado {
         public salario: String,
         public cargo: String,
         public afiliacionPensiones: String,
+        public saldoPensiones: Number,
         public afiliacionCesantias: String,
+        public saldoCesantias: Number,
         public role: String
     ){}
 }

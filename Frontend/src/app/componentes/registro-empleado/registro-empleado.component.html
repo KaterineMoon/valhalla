@@ -8,7 +8,7 @@
     <input type="text" class="form-control" #apellido="ngModel" name="apellido" [(ngModel)]="empleado.apellido"
       required><br>
     <p>Cédula</p>
-    <input type="text" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula" required>
+    <input type="number" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula" required>
     <small id="emailHelp" class="form-text text-muted">Ingrese solamente los números. No incluya puntos ni
       espacios.</small><br>
     <p>Contraseña</p>
@@ -17,13 +17,14 @@
     <p>Edad</p>
     <input type="text" class="form-control" #edad="ngModel" name="edad" [(ngModel)]="empleado.edad" required><br>
     <p>Empresa</p>
-    <input type="text" class="form-control" #empresa="ngModel" name="empresa" [(ngModel)]="empleado.empresa" required><br>
+    <input type="text" class="form-control" #empresa="ngModel" name="empresa" [(ngModel)]="empleado.empresa"
+      required><br>
     <p>Fecha de Ingreso</p>
     <input type="date" class="form-control" #fechaIngreso="ngModel" name="fechaIngreso"
       [(ngModel)]="empleado.fechaIngreso" required><br>
     <p>Salario</p>
     <span class="input-group-text">$</span>
-    <input type="text" class="form-control" #salario="ngModel" name="salario" [(ngModel)]="empleado.salario"
+    <input type="number" class="form-control" #salario="ngModel" name="salario" [(ngModel)]="empleado.salario"
       required><br>
     <p>Cargo</p>
     <input type="text" class="form-control" #cargo="ngModel" name="cargo" [(ngModel)]="empleado.cargo" required><br>
@@ -35,6 +36,10 @@
       <option>Protección</option>
       <option>Skandia</option>
     </select><br>
+    <p>Saldo de Pensiones</p>
+    <span class="input-group-text">$</span>
+    <input type="number" class="form-control" #saldoPensiones="ngModel" name="saldoPensiones"
+      [(ngModel)]="empleado.saldoPensiones" required><br>
     <p>Afiliación a Cesantías</p>
     <select type="text" class="form-control" #afiliacionCesantias="ngModel" name="afiliacionCesantias"
       [(ngModel)]="empleado.afiliacionCesantias" required><br>
@@ -43,7 +48,12 @@
       <option>Protección</option>
       <option>Skandia</option>
     </select><br>
-    <input type="checkbox" name="vehicle1" value="Bike" required> Acepto los términos y condiciones de Valhalla y la Política de
+    <p>Saldo de Cesantías</p>
+    <span class="input-group-text">$</span>
+    <input type="number" class="form-control" #saldoCesantias="ngModel" name="saldoCesantias"
+      [(ngModel)]="empleado.saldoCesantias" required><br>
+    <input type="checkbox" name="vehicle1" value="Bike" required> Acepto los términos y condiciones de Valhalla y la
+    Política de
     Privacidad<br><br>
     <button type="submit" class="btn btn-primary">Registrarse</button><br><br>
     <div *ngIf="registroCorrecto" class="alert alert-primary">
