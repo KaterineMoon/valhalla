@@ -11,12 +11,12 @@ var EmpleadoSchema = Schema({
   edad: Number,
   empresa: String,
   fechaIngreso: Date,
-  salario: String,
+  salario: Number,
   cargo: String,
   afiliacionPensiones: String,
   saldoPensiones: Number,
   afiliacionCesantias: String,
-  saldoCesantías: Number,
+  saldoCesantias: Number,
   role: String
 });
 

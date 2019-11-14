@@ -1,62 +1,112 @@
-<div class="row container-fluid">
-  <form class="col-6" #f="ngForm" (ngSubmit)="registrar()" ngNativeValidate>
-    <br>
-    <h1>Registro de Empleados</h1><br>
-    <p>Nombre</p>
-    <input type="text" class="form-control" #nombre="ngModel" name="nombre" [(ngModel)]="empleado.nombre" required><br>
-    <p>Apellido</p>
-    <input type="text" class="form-control" #apellido="ngModel" name="apellido" [(ngModel)]="empleado.apellido"
-      required><br>
-    <p>Cédula</p>
-    <input type="number" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula" required>
-    <small id="emailHelp" class="form-text text-muted">Ingrese solamente los números. No incluya puntos ni
-      espacios.</small><br>
-    <p>Contraseña</p>
-    <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empleado.password"
-      required><br>
-    <p>Edad</p>
-    <input type="text" class="form-control" #edad="ngModel" name="edad" [(ngModel)]="empleado.edad" required><br>
-    <p>Empresa</p>
-    <input type="text" class="form-control" #empresa="ngModel" name="empresa" [(ngModel)]="empleado.empresa"
-      required><br>
-    <p>Fecha de Ingreso</p>
-    <input type="date" class="form-control" #fechaIngreso="ngModel" name="fechaIngreso"
-      [(ngModel)]="empleado.fechaIngreso" required><br>
-    <p>Salario</p>
-    <span class="input-group-text">$</span>
-    <input type="number" class="form-control" #salario="ngModel" name="salario" [(ngModel)]="empleado.salario"
-      required><br>
-    <p>Cargo</p>
-    <input type="text" class="form-control" #cargo="ngModel" name="cargo" [(ngModel)]="empleado.cargo" required><br>
-    <p>Afiliación a Pensiones</p>
-    <select type="text" class="form-control" #afiliacionPensiones="ngModel" name="afiliacionPensiones"
+<form class="form" #f="ngForm" (ngSubmit)="registrar()" ngNativeValidate>
+  <div class="container">
+    <h1>Registro de Personas</h1><br>
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" #nombre="ngModel" name="nombre" [(ngModel)]="empleado.nombre" required>
+      </div>
+      <div class="form-group col-6">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" #apellido="ngModel" name="apellido" [(ngModel)]="empleado.apellido"
+          required>
+      </div>
+      <div class="form-group col-6">
+        <label for="cedula">Cédula</label>
+        <input type="number" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula"
+          required>
+        <small id="emailHelp" class="form-text text-muted">Ingrese solamente los números. No incluya puntos ni
+          espacios.</small>
+      </div>
+      <div class="form-group col-6">
+        <label for="password">Contraseña</label>
+        <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empleado.password"
+          required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-1">
+        <label for="edad">Edad</label>
+        <input type="number" class="form-control" #edad="ngModel" name="edad" [(ngModel)]="empleado.edad" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="empresa">Empresa</label>
+        <input type="text" class="form-control" #empresa="ngModel" name="empresa" [(ngModel)]="empleado.empresa"
+          required>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="fechaIngreso">Fecha de ingreso</label>
+        <input type="date" class="form-control" #fechaIngreso="ngModel" name="fechaIngreso"
+          [(ngModel)]="empleado.fechaIngreso" required>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="salario">Salario</label>
+        <div class="input-group mb-4">
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="number" class="form-control" #salario="ngModel" name="salario" [(ngModel)]="empleado.salario"
+            required>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="cargo">Cargo</label>
+        <input type="text" class="form-control" #cargo="ngModel" name="cargo" [(ngModel)]="empleado.cargo" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="afiliacionPensiones">Afiliación a Pensiones</label>
+        <select type="text" class="form-control" #afiliacionPensiones="ngModel" name="afiliacionPensiones"
       [(ngModel)]="empleado.afiliacionPensiones" required><br>
       <option>Colfondos</option>
       <option>Porvenir</option>
       <option>Protección</option>
       <option>Skandia</option>
-    </select><br>
-    <p>Saldo de Pensiones</p>
-    <span class="input-group-text">$</span>
-    <input type="number" class="form-control" #saldoPensiones="ngModel" name="saldoPensiones"
-      [(ngModel)]="empleado.saldoPensiones" required><br>
-    <p>Afiliación a Cesantías</p>
-    <select type="text" class="form-control" #afiliacionCesantias="ngModel" name="afiliacionCesantias"
+    </select>
+      </div>
+      <div class="form-group col-md-3">
+          <label for="saldoPensiones">Saldo de Pensiones</label>
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="number" class="form-control" #saldoPensiones="ngModel" name="saldoPensiones"
+        [(ngModel)]="empleado.saldoPensiones" required>
+          </div>
+      </div>
+      <div class="form-group col-md-3">
+          <label for="afiliacionCesantias">Afiliación a Cesantías</label>
+          <select type="text" class="form-control" #afiliacionCesantias="ngModel" name="afiliacionCesantias"
       [(ngModel)]="empleado.afiliacionCesantias" required><br>
-      <option>Colfondos</option>
-      <option>Porvenir</option>
-      <option>Protección</option>
-      <option>Skandia</option>
-    </select><br>
-    <p>Saldo de Cesantías</p>
-    <span class="input-group-text">$</span>
-    <input type="number" class="form-control" #saldoCesantias="ngModel" name="saldoCesantias"
-      [(ngModel)]="empleado.saldoCesantias" required><br>
-    <input type="checkbox" name="vehicle1" value="Bike" required> Acepto los términos y condiciones de Valhalla y la
-    Política de
-    Privacidad<br><br>
+        <option>Colfondos</option>
+        <option>Porvenir</option>
+        <option>Protección</option>
+        <option>Skandia</option>
+      </select>
+      </div>
+      <div class="form-group col-md-3">
+          <label for="saldoCesantias">Saldo de Cesantías</label>
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="number" class="form-control" #saldoCesantias="ngModel" name="saldoCesantias"
+        [(ngModel)]="empleado.saldoCesantias" required>
+          </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+        <label class="form-check-label" for="gridCheck">
+            Acepto los Términos y Condiciones de Valhalla y la Política de Privacidad
+        </label>
+      </div>
+    </div>
     <button type="submit" class="btn btn-primary">Registrarse</button><br><br>
     <div *ngIf="registroCorrecto" class="alert alert-primary">
-      {{registroCorrecto}}
-    </div>
-  </form>
+        {{registroCorrecto}}
+      </div>
+  </div>
+</form>
