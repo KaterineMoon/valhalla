@@ -1,3 +1,4 @@
+<br><br>
 <form class="form" #f="ngForm" (ngSubmit)="registrar()" ngNativeValidate>
   <div class="container">
     <h1>Registro de Personas</h1><br>
@@ -39,6 +40,10 @@
         <input type="date" class="form-control" #fechaIngreso="ngModel" name="fechaIngreso"
           [(ngModel)]="empleado.fechaIngreso" required>
       </div>
+      <div class="form-group col-md-3">
+          <label for="cargo">Cargo</label>
+          <input type="text" class="form-control" #cargo="ngModel" name="cargo" [(ngModel)]="empleado.cargo" required>
+        </div>
       <div class="form-group col-md-2">
         <label for="salario">Salario</label>
         <div class="input-group mb-4">
@@ -48,10 +53,6 @@
           <input type="number" class="form-control" #salario="ngModel" name="salario" [(ngModel)]="empleado.salario"
             required>
         </div>
-      </div>
-      <div class="form-group col-md-3">
-        <label for="cargo">Cargo</label>
-        <input type="text" class="form-control" #cargo="ngModel" name="cargo" [(ngModel)]="empleado.cargo" required>
       </div>
     </div>
     <div class="form-row">
