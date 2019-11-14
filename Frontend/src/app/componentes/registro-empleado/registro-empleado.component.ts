@@ -20,7 +20,23 @@ export class RegistroEmpleadoComponent implements OnInit {
     if (localStorage.getItem("sesion") != null) {
       this._router.navigate(["/menu"]);
     }
-    this.empleado = new Empleado("","", "", null,"","","","","", "","", null,"",null,"");
+    this.empleado = new Empleado(
+      "",
+      "",
+      "",
+      null,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      null,
+      "",
+      null,
+      ""
+    );
   }
 
   ngOnInit() {}

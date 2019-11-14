@@ -9,7 +9,7 @@ import { HttpClientService } from '../../servicios/http-client.service';
 })
 export class InformacionEmpleadoComponent implements OnInit {
   persona : Empleado;
-  // actualizacionCorrecta;
+  actualizacionCorrecta;
   url = "http://localhost:3977/api/";
 
   constructor(
@@ -32,21 +32,21 @@ export class InformacionEmpleadoComponent implements OnInit {
       }
     )
   }
-  // actualizar(){
-  //   this._httpClientService.actualizar(this.persona._id, this.persona).subscribe(
-  //     (response : any ) => {
-  //       if(response.persona){
-  //         this.actualizacionCorrecta = "Datos actualizados correctamente";
-  //         this.persona = response.persona;
-  //         localStorage.setItem("sesion", JSON.stringify(this.persona));
-  //       }else{
-  //         this.actualizacionCorrecta = "Los datos no se actualizaron, por favor inténtalo de nuevo";
-  //       }
-  //     }, error => {
-  //       if(error != null){
-  //         console.log(error)
-  //       }
-  //     }
-  //   )
-  // }
+  actualizar(){
+    this._httpClientService.actualizar(this.persona._id, this.persona).subscribe(
+      (response : any ) => {
+        if(response.persona){
+          this.actualizacionCorrecta = "Datos actualizados correctamente";
+          this.persona = response.persona;
+          localStorage.setItem("sesion", JSON.stringify(this.persona));
+        }else{
+          this.actualizacionCorrecta = "Los datos no se actualizaron, por favor inténtalo de nuevo";
+        }
+      }, error => {
+        if(error != null){
+          console.log(error)
+        }
+      }
+    )
+  }
 }
