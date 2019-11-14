@@ -4,7 +4,7 @@
 }
 
 .aText:hover  {
-    color: #bec4c9 !important;
+    color: #d9ff00 !important;
 }
 .navColor {
     background-color: #0FAEF3;
@@ -15,11 +15,16 @@
 
 }
 
-.navColorFull{
+/* .navColorFull{
     background-color:#073b6d;
     -webkit-box-shadow:0px 1px 1px #bec4c9; 
     -moz-box-shadow:0px 1px 1px #bec4c9; 
     box-shadow:0px 1px 1px #3f3f3f;;
+} */
+
+
+.TituloPpal {
+    font-size: 3.5rem !important;
 }
 
 .linkColor {
@@ -39,7 +44,7 @@
 }
 
 body{
-    background-color: rgb(233, 233, 233) !important;
+    background-color: #ebebeb !important;
  
 }
 
@@ -54,15 +59,16 @@ body{
 }
 
 .cardColor{
-    background-color: #00963D;
+    background-color: #28a744;
 }
 
 .footerColor {
-    background-color: #017BB0 !important;
-    color: #fff !important;
+    background-color: #bebebe !important;
+    color: #120b4e !important;
 }
 .footerColorCopy {
-    background-color: #015C83 !important;
+    background-color: #3d3d3d !important;
+    color: #ffffff;
 }
 .infoRelevante{
     color: #073b6d !important;
@@ -75,17 +81,22 @@ body{
 }
 
 .aColorF:hover  {
-    color: #006dd3 !important;
+    color: #008cff !important;
     text-decoration-line: none !important;
 }
 
 .aTextR {
-    color: #ffffff !important;
+    color: #073b6d !important;
     font-size: 15px !important;
 }
 
 .aTextR:hover  {
-    color: #bec4c9 !important;
+    color: #008cff !important;
+}
+
+.fondoblanc{
+     background-color: #e0e0e0 !important;
+    
 }
 
 @keyframes latidos {

@@ -1,7 +1,11 @@
-<div class="p-3">
-    <h1>Cesantías</h1>
+<div class="container p-3">
 
-    <p>
+  <div style="height:60px">
+  </div>
+
+  <h1 class="TituloPpal">Cesantías</h1>
+
+    <p class="pb-2">
       Las cesantías son uno de nuestros ahorros más importantes, por eso no deben quedar
       al cuidado de cualquiera. Confia en nosotros para proteger tus ahorros y sacarles el
       máximo provecho con nuestros rendimientos.
@@ -9,52 +13,55 @@
 
     <div class="px-5 row">
 
-      <div class="col-md-12 col-lg-4">
-        <h3>¿Qué son las cesantías?</h3>
-      </div>
+        <div class="card-columns container pb-5">
+            <div class="card">
+                <a class="aTextNews" href="#">
+                  <div class="card-body">
+                    <h5 class="card-title">¿Qué son las cesantías?</h5>
+                    <p class="card-text">Son una prestación social que el empleador debe pagar a sus trabajadores adicional al salario
+                        ordinario, y equivale a un mes de salario por cada año trabajado del empleado.</p>
+                  </div>
+                </a>
+            </div>
 
-      <div class="col-md-12 col-lg-4">
-        <h3>¿Para qué se sirven?</h3>
-      </div>
+            <div class="card">
+                <a class="aTextNews" href="#">
+                  <div class="card-body">
+                    <h5 class="card-title">¿Para qué se sirven?</h5>
+                    <p class="card-text">Este ahorro te sirve para las siguientes tres situaciones:</p> 
+                    <ul>
+                        <li>Compra de vivienda</li>
+                        <li>Pago de estudios</li>
+                        <li>Desempleo</li>
+                      </ul>
 
-      <div class="col-md-12 col-lg-4">
-        <h3>¿Cuándo y cómo se liquidan?</h3>
-      </div>
+                  </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a class="aTextNews" href="#">
+                  <div class="card-body">
+                    <h5 class="card-title">¿Cuándo y cómo se liquidan?</h5>
+                    <p class="card-text">Se liquidan el 31 de diciembre de cada año, y el empleador debe consignarlas al fondo de
+                        cesantías elegido antes del 15 de febrero del siguiente año.</p>
+                  </div>
+                </a>
+            </div>
+        </div>
     </div>
+  </div>
 
-    <div class="px-5 row">
-
-      <div class="col-md-12 col-lg-4">
-        <p>
-          Son una prestación social que el empleador debe pagar a sus trabajadores adicional al salario
-          ordinario, y equivale a un mes de salario por cada año trabajado del empleado.
-        </p>
-      </div>
-
-      <div class="col-md-12 col-lg-4">
-        <p>
-          Este ahorro te sirve para las siguientes tres situaciones:
-        </p>
-        <ul>
-          <li>Compra de vivienda</li>
-          <li>Pago de estudios</li>
-          <li>Desempleo</li>
-        </ul>
-      </div>
-
-      <div class="col-md-12 col-lg-4">
-        <p>Se liquidan el 31 de diciembre de cada año, y el empleador debe consignarlas al fondo de
-          cesantías elegido antes del 15 de febrero del siguiente año.
-        </p>
-      </div>
-    </div>
-
-    <h3>Calcula tus cesantías</h3>
+  <!-- Título Formulario-->  
+ <div class="fondoblanc pb-5 pt-5">
+  <div class="container">
+  <h3 class="text-center" >Calcula tus cesantías</h3>
     <p>A continuación podrás encontrar una herramienta que te permitirá calcular tus cesantías,
       diligencia la información solicitada y te diremos el valor correspondiente.
     </p>
 
-    <div>
+<!-- Formulario-->
+  <div >
       <form class="form-group" (ngSubmit)="calcular()" #f="ngForm">
         <div class="row">
           <div class="col-md-2">
@@ -95,5 +102,5 @@
         </div>
       </form>
     </div>
-
-  </div>
+  </div> 
+</div>  
