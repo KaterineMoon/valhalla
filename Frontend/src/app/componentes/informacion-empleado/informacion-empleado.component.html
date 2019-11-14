@@ -7,26 +7,36 @@
     <div class="px-3">
         <div class="row my-4 text-white">
             <div class="col-7">
-                <form #infoForm="ngForm" (ngSubmit)="obtener()" ngNativeValidate>
                     <br>
                     <h1>INFORMACION</h1>
                     <br>
                     <p >Hola {{persona.nombre}}</p>
-                    <!-- <input type="text" class="form-control" #nombre="ngModel" name="nombre" [(ngModel)]="persona.nombre" required> -->
+                   
                     <br>
                     <p>Empresa: </p>
                     <p>{{persona.empresa}}</p>
-                    <!-- <input type="text" class="form-control" name="empresa" #empresa="ngModel" [(ngModel)]="persona.empresa" required> -->
-                    <br>
+                  
                     <p>Sueldo</p>
                     <p>{{persona.salario}}</p>
                     <br>
                     <p>Cargo</p>
                     <p>{{persona.cargo}}</p>
-                    <!-- <input type="text" class="form-control" #cargo="ngModel" name="cargo" [(ngModel)]="persona.cargo" required> -->
+                   
                     <br>
-                </form>
-            </div>
+
+                    <p>Saldo Cesantias</p>
+                    <p>{{persona.saldoCesantias}}</p>
+                   
+                    <br>
+
+                    <p>Saldo Pensiones</p>
+                    <p>{{persona.saldoPensiones}}</p>
+                   
+                    <br>
+
+                <!-- </form> -->
+
+                
             <div class="col-5"></div>
         </div>
     </div>
