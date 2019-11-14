@@ -30,6 +30,18 @@ export class HttpClientService {
     ).pipe(map(res => res));
   }
 
+  afiliar(empleado){
+    let params = JSON.stringify(empleado);
+    let options = {
+      headers: new HttpHeaders(
+        { 'Content-Type': 'application/json'})};
+    return this._http.post(
+      this.url + "afiliacion",
+      params,
+      options
+    ).pipe(map(res => res));
+  }
+
   login(empleado) {
     let params = JSON.stringify(empleado);
     let options = {

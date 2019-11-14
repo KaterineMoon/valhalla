@@ -1,1 +1,42 @@
-<p class="py-5">afiliacion works!</p>
+<style>
+    p {
+        color: black;
+    }
+</style>
+<div class="page-header" data-parallax="true">
+    <div class="px-3">
+        <div class="row my-4 text-white">
+            <form #afiliacionForm="ngForm" (ngSubmit)="afiliar()" ngNativeValidate>
+                <br>
+                <h1>Empecemos con tu afiliación a pensiones obligatorias</h1>
+                <h3>La pensión es un ahorro que vas haciendo e incrementa durante tu vida laboral.
+                        Adelanta este proceso 100% digital, sin costo y sólo en 4 pasos</h3>
+                <br>
+                <p>Mi número de cédula es:</p>
+                <input type="number" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="persona.cedula"
+                    required>
+                <br>
+                <p>Mi número de celular es: </p>
+                <input type="number" class="form-control" name="celular" #empresa="ngModel"
+                    [(ngModel)]="persona.edad" required>
+                <br>
+                <p>Y mi correo es</p>
+                <input type="text" class="form-control" #correo="ngModel" name="correo" [(ngModel)]="persona.correo"
+                    required>
+                <br>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                        <label class="form-check-label" for="gridCheck">
+                            Acepto los Términos y Condiciones de Valhalla y la Política de Privacidad
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarse</button><br><br>
+                <div *ngIf="afiliacionCorrecta" class="alert alert-primary">
+                    {{afiliacionCorrecta}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

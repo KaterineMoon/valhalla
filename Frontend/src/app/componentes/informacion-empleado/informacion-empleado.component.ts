@@ -23,7 +23,7 @@ export class InformacionEmpleadoComponent implements OnInit {
 
 
   obtener(){
-    this._httpClientService.obtener(this.persona._id).subscribe(
+    this._httpClientService.afiliar(this.persona).subscribe(
       (response: any) => {
         console.log(response)
         
