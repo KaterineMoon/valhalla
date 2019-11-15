@@ -81,31 +81,8 @@ function actualizarPersona(req, res) {
   });
 }
 
-function afiliar(req, res) {
-  var empleado = new Empleado();
-  var params = req.body;
-
-  empleado.cedula = params.cedula;
-  empleado.celular = params.celular;
-  empleado.correo = params.correo;
-  
-  empleado.save((error, afiliacionCorrecta) => {
-    if (error) {
-      res.status(500).send({ message: "Error en el servidor" });
-    } else {
-      if (!empleadoCreado) {
-        res.status(400).send({ message: "No se ha guardado el usuario" });
-      } else {
-        res.status(200).send({
-          empleado: afiliacionCorrecta
-        });
-      }
-    }
-  });
-}
 module.exports = {
   crearEmpleado,
   loginEmpleado,
   actualizarPersona,
-  afiliar
 };
