@@ -1,28 +1,37 @@
-<style>
-    p {
-        color: black;
-    }
-</style>
-<div class="page-header" data-parallax="true">
+<div class="container m-auto" data-parallax="true">
+   
+   <div style="height: 60px;"> </div>
     <div class="px-3">
-        <div class="row my-4 text-white">
+        <div class="row input">
+            <br>
+            <br>
+            <br>
+            
+                <h1 class="aTextR">Empecemos con tu afiliación a pensiones obligatorias</h1>
+                <h3>La pensión es un ahorro que vas haciendo e incrementa durante tu vida laboral.
+                    Adelanta este proceso 100% digital, sin costo y sólo en 4 pasos</h3>
+           
             <form #afiliacionForm="ngForm" (ngSubmit)="afiliar()" ngNativeValidate>
                 <br>
-                <h1>Empecemos con tu afiliación a pensiones obligatorias</h1>
-                <h3>La pensión es un ahorro que vas haciendo e incrementa durante tu vida laboral.
-                        Adelanta este proceso 100% digital, sin costo y sólo en 4 pasos</h3>
+                <div class="row">
+                    <label class="col-6">Mi número de cédula es:</label>
+                    <input type="number" class="form-control col-6" #cedula="ngModel" name="cedula"
+                        [(ngModel)]="persona.cedula">
+                </div>
                 <br>
-                <p>Mi número de cédula es:</p>
-                <input type="number" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="persona.cedula"
-                    required>
+                <div class="row">
+                    <label class="col-6">Mi número de celular es: </label>
+                    <input type="number" class="form-control col-6" name="celular" #empresa="ngModel"
+                        [(ngModel)]="persona.edad" required>
+                    <br>
+                </div>
                 <br>
-                <p>Mi número de celular es: </p>
-                <input type="number" class="form-control" name="celular" #empresa="ngModel"
-                    [(ngModel)]="persona.edad" required>
-                <br>
-                <p>Y mi correo es</p>
-                <input type="text" class="form-control" #correo="ngModel" name="correo" [(ngModel)]="persona.correo"
-                    required>
+                <div class="row">
+                    <label class="col-6">Y mi correo es</label>
+                    <input type="text" class="form-control col-6" #correo="ngModel" name="correo"
+                        [(ngModel)]="persona.nombre" required>
+                    <br>
+                </div>
                 <br>
                 <div class="form-group">
                     <div class="form-check">
@@ -32,11 +41,12 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Registrarse</button><br><br>
+                <button type="submit" class="btn btn-success">Registrarse</button><br><br>
                 <div *ngIf="afiliacionCorrecta" class="alert alert-primary">
                     {{afiliacionCorrecta}}
                 </div>
             </form>
         </div>
+
     </div>
 </div>
