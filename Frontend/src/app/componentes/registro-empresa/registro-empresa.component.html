@@ -1,4 +1,4 @@
-<div class="row justify-content-center">
+<div class="row container-fluid">
   <form class="col-6" #f="ngForm" (ngSubmit)="registrar()" ngNativeValidate>
     <br>
     <h1>Registro de Empresa</h1><br>
@@ -6,7 +6,7 @@
     <input type="text" class="form-control" #razonSocial="ngModel" name="razonSocial" [(ngModel)]="empresa.razonSocial"
       required><br>
     <p>NIT</p>
-    <input type="number" class="form-control" #nit="ngModel" name="nit" [(ngModel)]="empresa.nit" required>
+    <input type="text" class="form-control" #nit="ngModel" name="nit" [(ngModel)]="empresa.nit" required>
     <small id="emailHelp" class="form-text text-muted">Ingrese solamente los números. No incluya puntos ni
       espacios.</small><br>
     <p>Contraseña</p>

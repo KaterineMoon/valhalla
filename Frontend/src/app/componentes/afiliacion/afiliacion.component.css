@@ -1,13 +1,9 @@
-h1{
-    color:#0033a0;
-    text-align: center;
-}
-h3{
-    color: black;
-    text-align: center;
-}
+
 .input{
     font-size: 14px;
     
-    /* border: 1px solid red; */
+}
+
+.parrafoIntro{
+    font-size: 1.5rem !important;
 }

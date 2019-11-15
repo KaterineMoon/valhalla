@@ -23,8 +23,14 @@
 } */
 
 
+.subTAfiliacion{
+ color: #757373 ;
+ font-size: 120%;
+}
+
 .TituloPpal {
     font-size: 3.5rem !important;
+    color: #0033a0 !important;
 }
 
 .linkColor {

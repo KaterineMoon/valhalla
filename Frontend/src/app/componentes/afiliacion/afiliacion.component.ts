@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientService } from '../../servicios/http-client.service';
-import { Persona } from 'src/app/modelos/nuevaPersona';
+import { Empleado } from 'src/app/modelos/empleado';
 
 @Component({
   selector: 'app-afiliacion',
@@ -8,24 +8,20 @@ import { Persona } from 'src/app/modelos/nuevaPersona';
   styleUrls: ['./afiliacion.component.css']
 })
 export class AfiliacionComponent implements OnInit {
-  persona : Persona;
+  persona : Empleado;
   afiliacionCorrecta;
 
-  constructor(private _httpClientService: HttpClientService) {
-    this.persona = new Persona("",null,null,"");
-  }
+  constructor(private _httpClientService: HttpClientService) {}
 
   ngOnInit() {
-
   }
 
   afiliar() {
     this._httpClientService.afiliar(this.persona).subscribe(
       (response: any) => {
-        if (response.persona) {
-          console.log(this.persona);
+        if (response.empleado) {
           this.afiliacionCorrecta =
-            "Afiliación correcta, nos estaremos comunicando " 
+            "Todavia no se " 
         } else {
           this.afiliacionCorrecta =
             "El registro no se ha podido realizar. Inténtelo de nuevo ";

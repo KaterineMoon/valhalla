@@ -1,51 +1,59 @@
 <div class="container m-auto" data-parallax="true">
 
-    <div style="height: 60px;"> </div>
+    <div style="height: 70px;"> </div>
     <div class="px-3">
         <div class="row input">
-            <br>
-            <br>
-            <br>
+            <h2 class="TituloPpal">Empecemos con tu afiliación a pensiones obligatorias</h2>
 
-            <h1 class="aTextR">Empecemos con tu afiliación a pensiones obligatorias</h1>
-            <h3>La pensión es un ahorro que vas haciendo e incrementa durante tu vida laboral.
-                Adelanta este proceso 100% digital, sin costo y sólo en 4 pasos</h3>
 
-            <form #afiliacionForm="ngForm" (ngSubmit)="afiliar()" ngNativeValidate>
-                <br>
-                <div class="row">
-                    <label class="col-6">Mi número de cédula es:</label>
-                    <input type="number" class="form-control col-6" #cedula="ngModel" name="cedula" [(ngModel)]="persona.cedula" required>
-                </div>
-                <br>
-                <div class="row">
-                    <label class="col-6">Mi número de celular es: </label>
-                    <input type="number" class="form-control col-6" name="celular" #celular="ngModel" [(ngModel)]="persona.celular" required>
-               <!-- <input type="text" class="form-control" #nombre="ngModel" name="nombre" [(ngModel)]="empleado.nombre" required> -->
-                    
+            <div class="row">
+                <p class=" col-5 pt-5 parrafoIntro font-weight-light text-justify align-middle">La pensión es un ahorro
+                    que vas
+                    haciendo e
+                    incrementa
+                    durante tu vida laboral.
+                    Adelanta este proceso 100% digital, sin costo y sólo en 4 pasos
+                    <br><br>
+                    <img src="../../../assets/img/afi-1.png" alt="afiliación" class="col-10 align-middle">
+                </p>
+
+                <form #afiliacionForm="ngForm" (ngSubmit)="afiliar()" ngNativeValidate class="col-5 form-horizontal"
+                    style="margin:0 auto">
                     <br>
-                </div>
-                <br>
-                <div class="row">
-                    <label class="col-6">Y mi correo es</label>
-                    <input type="text" class="form-control col-6" #correo="ngModel" name="correo"
-                        [(ngModel)]="persona.correo" required>
-                    <br>
-                </div>
-                <br>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
-                        <label class="form-check-label" for="gridCheck">
-                            Acepto los Términos y Condiciones de Valhalla y la Política de Privacidad
-                        </label>
+                    <div>
+                        <label>Número de identificación:</label>
+                        <input type="number" placeholder="ejemplo: 1018089923" class="form-control col-12"
+                            #cedula="ngModel" name="cedula" [(ngModel)]="persona.cedula">
                     </div>
-                </div>
-                <button type="submit" class="btn btn-success">Registrarse</button><br><br>
-                <div *ngIf="afiliacionCorrecta" class="alert alert-primary">
-                    {{afiliacionCorrecta}}
-                </div>
-            </form>
+                    <br>
+                    <div>
+                        <label>Número de Celular: </label>
+                        <input type="number" placeholder="ejemplo: 3057129890" class="form-control col-12"
+                            name="celular" #empresa="ngModel" [(ngModel)]="persona.edad" required>
+                        <br>
+                    </div>
+                    <br>
+                    <div>
+                        <label>Correo electrónico:</label>
+                        <input type="text" placeholder="ejemplo: info@tucorreo.com" class="form-control col-12"
+                            #correo="ngModel" name="correo" [(ngModel)]="persona.nombre" required>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" for="gridCheck">
+                                Acepto los Términos y Condiciones de Valhalla y la Política de Privacidad
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Registrarse</button><br><br>
+                    <div *ngIf="afiliacionCorrecta" class="alert alert-primary">
+                        {{afiliacionCorrecta}}
+                    </div>
+                </form>
+            </div>
         </div>
 
     </div>
