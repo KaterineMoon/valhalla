@@ -7,6 +7,8 @@ var EmpleadoSchema = Schema({
   nombre: String,
   apellido: String,
   cedula: Number,
+  celular: Number,
+  Correo: String,
   password: String,
   edad: Number,
   empresa: String,
