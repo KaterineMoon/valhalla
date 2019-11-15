@@ -38,7 +38,7 @@ export class HttpClientService {
       headers: new HttpHeaders(
         { 'Content-Type': 'application/json'})};
     return this._http.post(
-      this.url + "afiliacion",
+      this.url + "afiliado-afiliar",
       params,
       options
     ).pipe(map(res => res));

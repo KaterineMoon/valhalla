@@ -15,21 +15,21 @@
                 <br>
                 <div class="row">
                     <label class="col-6">Mi número de cédula es:</label>
-                    <input type="number" class="form-control col-6" #cedula="ngModel" name="cedula"
-                        [(ngModel)]="persona.cedula">
+                    <input type="number" class="form-control col-6" #cedula="ngModel" name="cedula" [(ngModel)]="persona.cedula" required>
                 </div>
                 <br>
                 <div class="row">
                     <label class="col-6">Mi número de celular es: </label>
-                    <input type="number" class="form-control col-6" name="celular" #empresa="ngModel"
-                        [(ngModel)]="persona.edad" required>
+                    <input type="number" class="form-control col-6" name="celular" #celular="ngModel" [(ngModel)]="persona.celular" required>
+               <!-- <input type="text" class="form-control" #nombre="ngModel" name="nombre" [(ngModel)]="empleado.nombre" required> -->
+                    
                     <br>
                 </div>
                 <br>
                 <div class="row">
                     <label class="col-6">Y mi correo es</label>
                     <input type="text" class="form-control col-6" #correo="ngModel" name="correo"
-                        [(ngModel)]="persona.nombre" required>
+                        [(ngModel)]="persona.correo" required>
                     <br>
                 </div>
                 <br>
