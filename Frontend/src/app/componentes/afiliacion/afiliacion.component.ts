@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientService } from '../../servicios/http-client.service';
-import { Empleado } from 'src/app/modelos/empleado';
+import { Persona } from 'src/app/modelos/nuevaPersona';
 
 @Component({
   selector: 'app-afiliacion',
@@ -8,7 +8,7 @@ import { Empleado } from 'src/app/modelos/empleado';
   styleUrls: ['./afiliacion.component.css']
 })
 export class AfiliacionComponent implements OnInit {
-  persona : Empleado;
+  persona : Persona;
   afiliacionCorrecta;
 
   constructor(private _httpClientService: HttpClientService) {}
