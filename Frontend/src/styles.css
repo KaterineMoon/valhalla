@@ -1,18 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 .aText {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
-.aText:hover  {
-    color: #d9ff00 !important;
+.aText:hover {
+  color: #d9ff00 !important;
 }
 .navColor {
-    background-color: #0FAEF3;
-    -webkit-box-shadow:0px 1px 1px #bec4c9; 
-    -moz-box-shadow:0px 1px 1px #bec4c9; 
-    box-shadow:0px 2px 2px #35343423;
-    transition: all 1s ease; 
-
+  background-color: #0faef3;
+  -webkit-box-shadow: 0px 1px 1px #bec4c9;
+  -moz-box-shadow: 0px 1px 1px #bec4c9;
+  box-shadow: 0px 2px 2px #35343423;
+  transition: all 1s ease;
 }
 
 /* .navColorFull{
@@ -22,101 +21,107 @@
     box-shadow:0px 1px 1px #3f3f3f;;
 } */
 
-
-.subTAfiliacion{
- color: #757373 ;
- font-size: 120%;
+.subTAfiliacion {
+  color: #757373;
+  font-size: 120%;
 }
 
 .TituloPpal {
-    font-size: 3.5rem !important;
-    color: #0033a0 !important;
+  font-size: 3.5rem !important;
+  color: #0033a0 !important;
+  padding-top: 15px;
+}
+
+.parafoPpal {
+  font-size: 1.1rem !important;
 }
 
 .linkColor {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .titulo {
-    font-size: 2rem !important;
-    color: #a8a8a8 !important;
-    padding-top: 50px;
-    text-align: center;
+  font-size: 2rem !important;
+  color: #a8a8a8 !important;
+  padding-top: 50px;
+  text-align: center;
 }
 
-.cardFondo{
- background: transparent !important;
- border: none !important;
+.cardFondo {
+  background: transparent !important;
+  border: none !important;
 }
 
-body{
-    background-color: #ebebeb !important;
- 
+body {
+  background-color: #ebebeb !important;
 }
 
-.aTextNews{
-    color: #282828 !important;
-    text-decoration-line: none !important;
-    
+.aTextNews {
+  color: #282828 !important;
+  text-decoration-line: none !important;
 }
-.aTextNews:hover{
-    color: #696969 !important;
-    text-decoration-line: none !important;
+.aTextNews:hover {
+  color: #696969 !important;
+  text-decoration-line: none !important;
 }
 
-.cardColor{
-    background-color: #28a744;
+.cardColor {
+  background-color: #28a744;
 }
 
 .footerColor {
-    background-color: #bebebe !important;
-    color: #120b4e !important;
+  background-color: #bebebe !important;
+  color: #120b4e !important;
 }
 .footerColorCopy {
-    background-color: #3d3d3d !important;
-    color: #ffffff;
+  background-color: #3d3d3d !important;
+  color: #ffffff;
 }
-.infoRelevante{
-    color: #073b6d !important;
+.infoRelevante {
+  color: #073b6d !important;
 }
 
 .aColorF {
-    color: #073b6d !important;
-    text-decoration-line: none !important;
-    
+  color: #073b6d !important;
+  text-decoration-line: none !important;
 }
 
-.aColorF:hover  {
-    color: #008cff !important;
-    text-decoration-line: none !important;
+.aColorF:hover {
+  color: #008cff !important;
+  text-decoration-line: none !important;
 }
 
 .aTextR {
-    color: #073b6d !important;
-    font-size: 15px !important;
+  color: #073b6d !important;
+  font-size: 15px !important;
 }
 
-.aTextR:hover  {
-    color: #008cff !important;
+.aTextR:hover {
+  color: #008cff !important;
 }
 
-.fondoblanc{
-     background-color: #e0e0e0 !important;
-    
+.fondoblanc {
+  background-color: #e0e0e0 !important;
 }
 
 @keyframes latidos {
-    from { transform: none; }
-    50% { transform: scale(1.4); }
-    to { transform: none; }
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: none;
+  }
 }
 
 .corazon {
-	display: inline-block;
-	font-size: 15px;
-	color: #9562ff;
-	animation: latidos .5s infinite;
-	transform-origin: center;
+  display: inline-block;
+  font-size: 15px;
+  color: #9562ff;
+  animation: latidos 0.5s infinite;
+  transform-origin: center;
 }
 
 @import "~ng-uikit-pro-standard/assets/scss/core/colors";

@@ -1,20 +1,39 @@
-<br><br>
+<br /><br />
 <div class="row container-fluid">
-    <form class="col-6" #f="ngForm" (ngSubmit)="login()" ngNativeValidate>
-        <br>
-        <h1>Ingreso de Personas</h1><br>
+  <div class="card centrado">
+    <div class="card-body">
+      <form class="col-12" #f="ngForm" (ngSubmit)="login()" ngNativeValidate>
+        <br />
+        <h1>Ingreso de Personas</h1>
+        <br />
         <p>Cédula</p>
-        <input type="number" class="form-control" #cedula="ngModel" name="cedula" [(ngModel)]="empleado.cedula"
-            required><br>
+        <input
+          type="number"
+          class="form-control"
+          #cedula="ngModel"
+          name="cedula"
+          [(ngModel)]="empleado.cedula"
+          required
+        /><br />
         <p>Contraseña</p>
-        <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empleado.password"
-            required><br><br>
-        <button type="submit" class="btn btn-primary">Ingresar</button><br><br>
+        <input
+          type="password"
+          class="form-control"
+          #password="ngModel"
+          name="password"
+          [(ngModel)]="empleado.password"
+          required
+        /><br /><br />
+        <a class="btn btn-primary">Ingresar</a>
+        <a class="btn btn-outline-primary ml-3">Afíliate</a> <br /><br />
         <div *ngIf="loginCorrecto" class="alert alert-danger">
-            {{loginCorrecto}}
+          {{ loginCorrecto }}
         </div>
-    </form>
-    <form class="col-6" #f="ngForm" (ngSubmit)="loginEmpresa()" ngNativeValidate>
+      </form>
+    </div>
+  </div>
+
+  <!--  <form class="col-6" #f="ngForm" (ngSubmit)="loginEmpresa()" ngNativeValidate>
         <br>
         <h1>Ingreso de Empresas</h1><br>
         <p>NIT</p>
@@ -26,5 +45,5 @@
         <div *ngIf="loginCorrecto" class="alert alert-danger">
             {{loginCorrecto}}
         </div>
-    </form>
+    </form> -->
 </div>
