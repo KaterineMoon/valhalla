@@ -1,3 +1,30 @@
 .picsum-img-wrapper img{
     width: 100%;
 }
+
+.cardBorder{
+    padding-top: 10px !important;
+    background-color: #ffffff !important;
+    padding-bottom: 10px !important;
+}
+
+.cardBorder2{
+    border-style: none !important;
+}
+
+.imgFirmas{
+    padding: 20px 0px 0px 0px;
+    width: 130px;
+    height: 100px;
+    float: right;
+  }
+
+.tituloTestimonios {
+    color: #0316b9 !important;
+    font-size: 2.3rem !important;
+  }
+
+  .subTTestimonios{
+    color: #000000;
+    font-size: 100%;
+  }
