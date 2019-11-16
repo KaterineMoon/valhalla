@@ -1,1 +1,96 @@
-<p>informacion-empresa works!</p>
+<style>
+    p {
+        color: black;
+    }
+</style>
+<br><br><br>
+<div class="page-header" data-parallax="true">
+    <div class="px-3">
+        <div class="row my-4 text-white">
+            <div class="col-3">
+                <div class="card">
+                    <img src="assets/img/icon-Inversion-01.svg" class="card-img-top" alt="..." width="60" height="60">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Hola {{persona.nombre}}</p>
+                        <hr>
+                        <p>Empresa:</p>
+                        <p>{{empresa.razonSocial}}</p>
+                        <hr>
+                        <p>Salario:</p>
+                        <p>{{persona.salario}}</p>
+                        <hr>
+                        <p>Cargo:</p>
+                        <p>{{persona.cargo}}</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="card">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s5">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+                                            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+                                            <div class="row">
+                                                <div class="input-field col-s12">
+                                                    <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Enter your FullName">
+                                                </div>
+                                                <div class="input-field col-s12">
+                                                    <input type="text" name="position" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Enter your Position">
+                                                </div>
+                                                <div class="input-field col-s12">
+                                                    <input type="text" name="office" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Enter your Office">
+                                                </div>
+                                                <div class="input-field col-s12">
+                                                    <input type="text" name="salary" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" value="0" placeholder="Enter your Salary">
+                                                </div>
+                                                <div class="card-action">
+                                                    <div class="input-field col-s12">
+                                                        <button class="btn right" style="margin-left: 2px;" (click)="resetForm(employeeForm)">Clean</button>
+                                                        <button class="btn right">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s7">
+                                <table class="striped highlight black-text">
+                                    <thead>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Operations</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let employee of employeeService.employees">
+                                            <td>{{ employee.name }}</td>
+                                            <td>{{ employee.position }}</td>
+                                            <td>{{ employee.office }}</td>
+                                            <td>
+                                                <a (click)="editEmployee(employee)">
+                                                    <i class="material-icons">edit</i>
+                                                </a>
+                                                <a (click)="deleteEmployee(employee._id, employeeForm)">
+                                                    <i class="material-icons">delete</i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{ employeeService.employees.length }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>

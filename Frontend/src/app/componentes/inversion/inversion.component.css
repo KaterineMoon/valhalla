@@ -1,0 +1,79 @@
+/* .formulario {
+    background-color: #042a4e;
+    padding: 0%;
+}
+
+.tituloIFormulario {
+    font-size: 3rem;
+    color: #07f513;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.subTIFormulario {
+    color: #ffffff;
+    font-size: 100%;
+    text-align: left;
+}
+
+.letraFormulario {
+    font-family: "Manjari", sans-serif;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.letraFormuP {
+    font-family: "Manjari", sans-serif;
+    font-size: 15px;
+    color: rgb(4, 240, 24);
+    text-align: right;
+}
+
+.letraFormuPP {
+    font-family: "Manjari", sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+/* .modal-content {
+    background: rgb(2, 219, 20);
+  background: -moz-linear-gradient(left, rgba(2, 219, 20) 0%, rgba(2, 219, 20) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(2, 219, 20)), color-stop(100%, rgba(124,215,236,1)));
+  background: -webkit-linear-gradient(left, rgba(2, 219, 20) 0%, rgba(2, 219, 20) 100%);
+  background: -o-linear-gradient(left, rgba(2, 219, 20) 0%, rgba(2, 219, 20) 100%);
+  background: -ms-linear-gradient(left, rgba(2, 219, 20) 0%, rgba(2, 219, 20) 100%);
+  background: linear-gradient(to right, rgba(2, 219, 20) 0%, rgba(2, 219, 20) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62b7cb', endColorstr='#7cd7ec', GradientType=1 );
+    margin: 15% auto; /* 15% from the top and centered 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px; /* Could be more or less, depending on screen size 
+  }
+  */
+
+
+/* .modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+} */
+
+
+/*
+  @media (min-width: 700px){
+    .modal-dialog {
+      max-width: 50px;
+      margin: 0.75rem auto;
+    }
+  }  */

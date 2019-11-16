@@ -13,3 +13,20 @@ export class InversionComponent implements OnInit {
   }
 
 }
+
+
+  
+  
+  
+
+  
+
+  
+
+ 
+
+
+   
+
+  
+ 
