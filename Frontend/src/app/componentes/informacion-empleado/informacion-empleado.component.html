@@ -1,79 +1,102 @@
+<div style="height:60px"></div>
+
 <style>
     p {
         color: black;
     }
 </style>
 <div class="page-header" data-parallax="true">
-    <div class="px-3">
-        <div class="row my-4 text-white">
-            <div class="col-3">
-                <div class="card">
-                    <img src="assets/img/icon-Inversion-01.svg" class="card-img-top" alt="..." width="60" height="60">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Hola {{persona.nombre}}</p>
-                        <hr>
-                        <p>Empresa:</p>
-                        <p>{{persona.empresa}}</p>
-                        <hr>
-                        <p>Salario:</p>
-                        <p>{{persona.salario}}</p>
-                        <hr>
-                        <p>Cargo:</p>
-                        <p>{{persona.cargo}}</p>
-                    </div>
-
-                </div>
+  <div class="px-3">
+    <div class="row my-4 text-white">
+      <div class="col-3">
+        <div class="card">
+          <img
+            src="assets/img/icon-Inversion-01.svg"
+            class="card-img-top"
+            alt="..."
+            width="60"
+            height="60"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Hola {{ persona.nombre }}</p>
+            <hr />
+            <p>Empresa:</p>
+            <p>{{ persona.empresa }}</p>
+            <hr />
+            <p>Salario:</p>
+            <p>{{ persona.salario }}</p>
+            <hr />
+            <p>Cargo:</p>
+            <p>{{ persona.cargo }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              atque facilis assumenda, mollitia consequatur tempore alias et
+              exercitationem delectus ratione dolores consectetur impedit
+              ducimus, nostrum obcaecati molestiae, ea quas placeat nobis
+              excepturi quo dolor! Cum ex necessitatibus maxime placeat tempore
+              provident quo adipisci ipsam. Et qui nam consequatur sint
+              excepturi consequuntur perferendis ratione, perspiciatis iure
+              nemo. Aliquam porro magni, similique eum minima velit eius maxime.
+              Libero dignissimos cum velit ad. Reprehenderit fugiat iste
+              consectetur eum facilis, earum explicabo sed et veritatis vitae
+              aspernatur quod illum sequi praesentium quos ex necessitatibus,
+              provident veniam laudantium laboriosam accusamus ipsam minus fuga
+              reiciendis. Rerum. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Numquam eaque, voluptatibus suscipit incidunt
+              aliquid ab sit unde aliquam? Dicta alias, modi error asperiores
+              molestias dolor dignissimos, doloribus explicabo maxime ab illum,
+              nobis placeat consequuntur atque aliquam quasi omnis ea. Adipisci
+              quod ipsum vitae consequuntur laboriosam illum fugiat nihil
+              deserunt sunt! Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Eum iure cum corporis, similique qui soluta deleniti tenetur
+              reiciendis cumque dolore consequatur culpa inventore cupiditate
+              nemo dolorem quidem ducimus sed magni aut id explicabo a fuga
+              accusantium atque. Quibusdam autem eos sunt ipsum, molestias
+              veniam doloremque quam expedita reiciendis temporibus beatae.
+            </p>
+            <hr />
+            <p class="card-text">Resumen de saldos y cesantías</p>
+            <hr />
+            <div class="row">
+              <div class="col-6">
+                <img
+                  src="assets/img/icon-Inversion-01.svg"
+                  class="card-img-top"
+                  alt="..."
+                  width="60"
+                  height="60"
+                />
+                <p class="text-center">Saldo Pensiones:</p>
+                <p class="text-center">{{ persona.saldoPensiones }}</p>
+                <hr />
+              </div>
+              <div class="col-6">
+                <img
+                  src="assets/img/icon-Inversion-01.svg"
+                  class="card-img-top"
+                  alt="..."
+                  width="60"
+                  height="60"
+                />
+                <p class="text-center">Saldo Cesantías:</p>
+                <p class="text-center">{{ persona.saldoCesantias }}</p>
+                <hr />
+              </div>
             </div>
-            <div class="col-9">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque
-                            facilis assumenda, mollitia consequatur tempore alias et exercitationem delectus ratione
-                            dolores consectetur impedit ducimus, nostrum obcaecati molestiae, ea quas placeat nobis
-                            excepturi quo dolor! Cum ex necessitatibus maxime placeat tempore provident quo adipisci
-                            ipsam. Et qui nam consequatur sint excepturi consequuntur perferendis ratione, perspiciatis
-                            iure nemo. Aliquam porro magni, similique eum minima velit eius maxime. Libero dignissimos
-                            cum velit ad. Reprehenderit fugiat iste consectetur eum facilis, earum explicabo sed et
-                            veritatis vitae aspernatur quod illum sequi praesentium quos ex necessitatibus, provident
-                            veniam laudantium laboriosam accusamus ipsam minus fuga reiciendis. Rerum.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eaque, voluptatibus
-                            suscipit incidunt aliquid ab sit unde aliquam? Dicta alias, modi error asperiores molestias
-                            dolor dignissimos, doloribus explicabo maxime ab illum, nobis placeat consequuntur atque
-                            aliquam quasi omnis ea. Adipisci quod ipsum vitae consequuntur laboriosam illum fugiat nihil
-                            deserunt sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure cum
-                            corporis, similique qui soluta deleniti tenetur reiciendis cumque dolore consequatur culpa
-                            inventore cupiditate nemo dolorem quidem ducimus sed magni aut id explicabo a fuga
-                            accusantium atque. Quibusdam autem eos sunt ipsum, molestias veniam doloremque quam expedita
-                            reiciendis temporibus beatae.</p>
-                        <hr>
-                        <p class="card-text">Resumen de saldos y cesantías</p>
-                        <hr>
-                        <div class="row">
-                            <div class="col-6">
-                                <img src="assets/img/icon-Inversion-01.svg" class="card-img-top" alt="..." width="60"
-                                    height="60">
-                                <p class="text-center">Saldo Pensiones:</p>
-                                <p class="text-center">{{persona.saldoPensiones}}</p>
-                                <hr>
-                            </div>
-                            <div class="col-6">
-                                <img src="assets/img/icon-Inversion-01.svg" class="card-img-top" alt="..." width="60"
-                                    height="60">
-                                <p class="text-center">Saldo Cesantías:</p>
-                                <p class="text-center">{{persona.saldoCesantias}}</p>
-                                
-                            </div>
-                        </div>
-                        <div class="container text-center">
+            <div class="container text-center">
                             <a class="nav-item btn btn-success mr-2" href="pdf-extracto">Extracto</a>
                             <a class="nav-item btn btn-success mr-2" href="pdf-certificado">Certificado</a>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
