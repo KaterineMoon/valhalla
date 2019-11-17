@@ -3,14 +3,12 @@ import { Component, OnInit } from '@angular/core';
  import * as pdfFonts from 'pdfmake/build/vfs_fonts';
  import { Empleado } from 'src/app/modelos/empleado';
  import { HttpClientService } from '../../servicios/http-client.service';
-import { Title } from '@angular/platform-browser';
-import { templateSourceUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './pdf-cesantias-pensiones.component.html'
+  templateUrl: './pdf-certificado.component.html'
 })
-export class PdfCesantiasPensionesComponent implements OnInit {
+export class PdfCertificadoComponent implements OnInit {
   title = 'app works!';
   persona : Empleado;
 
@@ -28,45 +26,35 @@ constructor(
           "VALHALLA",
           "  ",
           "  ",
-          "Noviembre 18 de 2019",
           "Bogotá, Colombia",
            "  ",
            "  ",
-          "Pepito Perez",
-          "CC 12345678",
-          "  ",
-          "  ",
-          "Los siguientes datos son la relaión de su cuenta de aportes realizados y consolodidado de ahorro hasta el día de hoy.",
-          "  ",
-          "  ",
-          "  ",
-          //this.persona.nombre,
-          // "A continuación " , 
-          {
-            layout: 'lightHorizontalLines', // optional
-            table: {
-              // headers are automatically repeated if the table spans over multiple pages
-              // you can declare how many rows should be treated as headers
-              headerRows: 1,
-              widths: [ '*', 'auto', 100, '*' ],
-              body: [
-                [ 'Fondo de Pensiones', 'Saldo ahorro   ', 'Fondo de Cesantias   ', 'Saldo Ahorro   '],
-                [ 'Valhalla', '$15.000.000', 'Valhalla', '$4.000.000' ]
-              ]
-            }
-          },              
+           "  ",
+           "  ",
+
+          "A QUIEN CORRESPONDA",
           "  ",
           "  ",
           "  ",
-          "  ",
-          "Rentabilidad del fondo",
-          "9.6%",
-          "  ",
-          "  ",
-          "Este valor será calculado, una vez tu cuenta de ahorro individual cumpla la misma antigüedad utilizada para el cálculo de la rentabilidad del Fondo donde se encuentran tus recursos",
+          "el señor PEPITO PEREZ con cédula de ciudadania número 123456789 de Bogotá figura como afiliado a la sociedad administradora de pensiones y cesantias Valhalla desde el 22 de febrero de 2017 y su estado es activo.",
+          " ",
+          " Se expide el siguiente certificado a solicitud del afiliado el día 18 de noviembre de 2019.",
           " ",
           " ",
           " ",
+          " ",
+          " ",
+          " ",
+          " ", 
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ", 
           " ",
           " ",
           " ",
