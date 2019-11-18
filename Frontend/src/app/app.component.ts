@@ -9,5 +9,6 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   providers: [NgbCarouselConfig]
 })
 export class AppComponent {
+  title = 'Valhalla';
   title = 'Frontend';
 }
