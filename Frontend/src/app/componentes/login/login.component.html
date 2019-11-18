@@ -1,4 +1,4 @@
-<br /><br />
+<div style="height: 70px;"></div>
 <div class="row container-fluid">
   <div class="card centrado">
     <div class="card-body">
@@ -24,8 +24,8 @@
           [(ngModel)]="empleado.password"
           required
         /><br /><br />
-        <a class="btn btn-primary">Ingresar</a>
-        <a class="btn btn-outline-primary ml-3">Afíliate</a> <br /><br />
+        <button class="btn btn-primary" type="submit">Ingresar</button>
+        <a class="btn btn-outline-primary ml-3" href="nuevo-empleado">Regístrate</a> <br /><br />
         <div *ngIf="loginCorrecto" class="alert alert-danger">
           {{ loginCorrecto }}
         </div>

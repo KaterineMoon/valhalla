@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
     this.empresa = new Empresa("", "", null, "", "");
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   login() {
     this._httpClientService.login(this.empleado).subscribe(
@@ -72,34 +72,6 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("sesion", JSON.stringify(empleadoLogueado));
           this._compartidoService.emitirLogueo(true);
           this._router.navigate(["/perfil-empleado"]);
-        } else {
-          this.loginCorrecto =
-            "Los datos ingresados son incorrectos. Pruebe nuevamente.";
-        }
-      },
-      error => {
-        if (error != null) {
-          console.log(error);
-        }
-      }
-    );
-  }
-
-  loginEmpresa() {
-    this._empresaService.login(this.empresa).subscribe(
-      (response: any) => {
-        if (response.empresa) {
-          let empresaLogueada = new Empresa(
-            response.empresa._id,
-            response.empresa.razonSocial,
-            response.empresa.nit,
-            response.empresa.password,
-            response.empresa.role
-          );
-
-          localStorage.setItem("sesion", JSON.stringify(empresaLogueada));
-          this._compartidoService.emitirLogueo(true);
-          this._router.navigate(["/perfil-empresa"]);
         } else {
           this.loginCorrecto =
             "Los datos ingresados son incorrectos. Pruebe nuevamente.";

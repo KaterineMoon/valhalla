@@ -9,6 +9,7 @@ import { InformacionEmpresaComponent } from './componentes/informacion-empresa/i
 import { InversionComponent } from './componentes/inversion/inversion.component'
 import { ListaEmpleadosComponent } from './componentes/lista-empleados/lista-empleados.component'
 import { LoginComponent } from './componentes/login/login.component'
+import { LoginEmpresaComponent } from './componentes/login-empresa/login-empresa.component'
 import { MainContentComponent } from './componentes/main-content/main-content.component'
 import { PensionComponent } from './componentes/pension/pension.component'
 import { RegistroEmpleadoComponent } from './componentes/registro-empleado/registro-empleado.component'
@@ -28,7 +29,8 @@ const routes: Routes = [
 { path: 'perfil-empresa', component: InformacionEmpresaComponent},
 { path: 'inversion', component: InversionComponent},
 { path: 'empleados', component: ListaEmpleadosComponent},
-{ path: 'login', component: LoginComponent},
+{ path: 'login-empleado', component: LoginComponent},
+{ path: 'login-empresa', component: LoginEmpresaComponent},
 { path: 'home', component: MainContentComponent},
 { path: 'pension', component: PensionComponent},
 { path: 'nuevo-empleado', component: RegistroEmpleadoComponent},

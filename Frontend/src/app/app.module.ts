@@ -26,6 +26,7 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { PdfCesantiasPensionesComponent } from './componentes/pdf-cesantias-pensiones/pdf-cesantias-pensiones.component';
 import { PdfCertificadoComponent } from './componentes/pdf-certificado/pdf-certificado.component';
+import { LoginEmpresaComponent } from './componentes/login-empresa/login-empresa.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { PdfCertificadoComponent } from './componentes/pdf-certificado/pdf-certi
     HeaderComponent,
     FooterComponent,
     PdfCesantiasPensionesComponent,
-    PdfCertificadoComponent
+    PdfCertificadoComponent,
+    LoginEmpresaComponent
   ],
   imports: [
     BrowserModule,
