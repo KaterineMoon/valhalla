@@ -48,7 +48,7 @@
               class="form-control col-12"
               name="celular"
               #empresa="ngModel"
-              [(ngModel)]="persona.edad"
+              [(ngModel)]="persona.celular"
               required
             />
             <br />
@@ -62,7 +62,7 @@
               class="form-control col-12"
               #correo="ngModel"
               name="correo"
-              [(ngModel)]="persona.nombre"
+              [(ngModel)]="persona.correo"
               required
             />
             <br />
@@ -82,8 +82,7 @@
               </label>
             </div>
           </div>
-          <button type="submit" class="btn btn-success">Registrarse</button
-          ><br /><br />
+          <button type="submit" class="btn btn-success">Registrarse</button><br/><br/>
           <div *ngIf="afiliacionCorrecta" class="alert alert-primary">
             {{ afiliacionCorrecta }}
           </div>
