@@ -15,6 +15,7 @@ import { InformacionEmpresaComponent } from './componentes/informacion-empresa/i
 import { InversionComponent } from './componentes/inversion/inversion.component';
 import { ListaEmpleadosComponent } from './componentes/lista-empleados/lista-empleados.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { LoginEmpresaComponent } from './componentes/login-empresa/login-empresa.component';
 import { MainContentComponent } from './componentes/main-content/main-content.component';
 import { PensionComponent } from './componentes/pension/pension.component';
 import { RegistroEmpleadoComponent } from './componentes/registro-empleado/registro-empleado.component';
@@ -24,9 +25,6 @@ import { ResumenPensionComponent } from './componentes/resumen-pension/resumen-p
 import { SolicitudRetiroComponent } from './componentes/solicitud-retiro/solicitud-retiro.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { PdfCesantiasPensionesComponent } from './componentes/pdf-cesantias-pensiones/pdf-cesantias-pensiones.component';
-import { PdfCertificadoComponent } from './componentes/pdf-certificado/pdf-certificado.component';
-import { LoginEmpresaComponent } from './componentes/login-empresa/login-empresa.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +37,7 @@ import { LoginEmpresaComponent } from './componentes/login-empresa/login-empresa
     InversionComponent,
     ListaEmpleadosComponent,
     LoginComponent,
+    LoginEmpresaComponent,
     MainContentComponent,
     PensionComponent,
     RegistroEmpleadoComponent,
@@ -47,10 +46,7 @@ import { LoginEmpresaComponent } from './componentes/login-empresa/login-empresa
     ResumenPensionComponent,
     SolicitudRetiroComponent,
     HeaderComponent,
-    FooterComponent,
-    PdfCesantiasPensionesComponent,
-    PdfCertificadoComponent,
-    LoginEmpresaComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

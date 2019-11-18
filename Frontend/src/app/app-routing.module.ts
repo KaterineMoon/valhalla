@@ -17,8 +17,6 @@ import { RegistroEmpresaComponent } from './componentes/registro-empresa/registr
 import { ResumenCesantiasComponent } from './componentes/resumen-cesantias/resumen-cesantias.component'
 import { ResumenPensionComponent } from './componentes/resumen-pension/resumen-pension.component'
 import { SolicitudRetiroComponent } from './componentes/solicitud-retiro/solicitud-retiro.component'
-import { PdfCesantiasPensionesComponent } from './componentes/pdf-cesantias-pensiones/pdf-cesantias-pensiones.component';
-import { PdfCertificadoComponent } from './componentes/pdf-certificado/pdf-certificado.component';
 
 const routes: Routes = [
 { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,7 +27,7 @@ const routes: Routes = [
 { path: 'perfil-empresa', component: InformacionEmpresaComponent},
 { path: 'inversion', component: InversionComponent},
 { path: 'empleados', component: ListaEmpleadosComponent},
-{ path: 'login-empleado', component: LoginComponent},
+{ path: 'login', component: LoginComponent},
 { path: 'login-empresa', component: LoginEmpresaComponent},
 { path: 'home', component: MainContentComponent},
 { path: 'pension', component: PensionComponent},
@@ -38,8 +36,6 @@ const routes: Routes = [
 { path: 'consolidado-cesantias', component: ResumenCesantiasComponent},
 { path: 'consolidado-pension', component: ResumenPensionComponent},
 { path: 'retiro-cesantias', component: SolicitudRetiroComponent},
-{ path: 'pdf-extracto', component: PdfCesantiasPensionesComponent},
-{ path: 'pdf-certificado', component: PdfCertificadoComponent}
 ];
 
 @NgModule({

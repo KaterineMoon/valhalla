@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Empresa } from "src/app/modelos/empresa";
 import { HttpClientService } from "../../servicios/http-client.service";
 import { ServicioEmpresaService } from "../../servicios/servicio-empresa.service";
@@ -19,13 +19,17 @@ export class LoginEmpresaComponent implements OnInit {
     private _compartidoService: ServicioCompartidoService,
     private _empresaService: ServicioEmpresaService
   ) {
-    if (localStorage.getItem("sesion") != null) {
+    if (localStorage.getItem("sesionEmpresa") != null) {
       this._router.navigate(["/perfil-empresa"]);
     }
     this.empresa = new Empresa("", "", null, "", "");
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
+ 
   }
 
   loginEmpresa() {

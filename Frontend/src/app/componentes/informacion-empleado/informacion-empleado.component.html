@@ -1,22 +1,17 @@
+<style>
+  /* p{
+    color: black;
+  } */
+</style>
+
 <div style="height:60px"></div>
 
-<style>
-    p {
-        color: black;
-    }
-</style>
 <div class="page-header" data-parallax="true">
   <div class="px-3">
     <div class="row my-4 text-white">
       <div class="col-3">
         <div class="card">
-          <img
-            src="assets/img/icon-Inversion-01.svg"
-            class="card-img-top"
-            alt="..."
-            width="60"
-            height="60"
-          />
+          <img src="assets/img/icon-Inversion-01.svg" class="card-img-top" alt="..." width="60" height="60" />
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Hola {{ persona.nombre }}</p>
@@ -66,34 +61,18 @@
             <hr />
             <div class="row">
               <div class="col-6">
-                <img
-                  src="assets/img/icon-Inversion-01.svg"
-                  class="card-img-top"
-                  alt="..."
-                  width="60"
-                  height="60"
-                />
+                <img src="assets/img/icon-Inversion-01.svg" class="card-img-top" alt="..." width="60" height="60" />
                 <p class="text-center">Saldo Pensiones:</p>
                 <p class="text-center">{{ persona.saldoPensiones }}</p>
                 <hr />
               </div>
               <div class="col-6">
-                <img
-                  src="assets/img/icon-Inversion-01.svg"
-                  class="card-img-top"
-                  alt="..."
-                  width="60"
-                  height="60"
-                />
+                <img src="assets/img/icon-Inversion-01.svg" class="card-img-top" alt="..." width="60" height="60" />
                 <p class="text-center">Saldo Cesantías:</p>
                 <p class="text-center">{{ persona.saldoCesantias }}</p>
                 <hr />
               </div>
             </div>
-            <div class="container text-center">
-                            <a class="nav-item btn btn-success mr-2" href="pdf-extracto">Extracto</a>
-                            <a class="nav-item btn btn-success mr-2" href="pdf-certificado">Certificado</a>
-                        </div>
           </div>
         </div>
       </div>

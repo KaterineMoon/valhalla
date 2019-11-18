@@ -11,7 +11,7 @@ import { Router, ActivatedRoute, Params } from "@angular/router";
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   empleado: Empleado;
   empresa: Empresa;
   loginCorrecto;
@@ -25,28 +25,14 @@ export class LoginComponent implements OnInit {
     if (localStorage.getItem("sesion") != null) {
       this._router.navigate(["/perfil-empleado"]);
     }
-    this.empleado = new Empleado(
-      "",
-      "",
-      "",
-      null,
-      "",
-      null,
-      "",
-      "",
-      "",
-      null,
-      "",
-      null,
-      "",
-      null,
-      ""
-    );
+    this.empleado = new Empleado("","","",null,"",null,"","","",null,"", null,"",null,"");
     this.empresa = new Empresa("", "", null, "", "");
   }
 
   ngOnInit() { }
-
+  ngOnDestroy() {
+ 
+  }
   login() {
     this._httpClientService.login(this.empleado).subscribe(
       (response: any) => {
@@ -72,6 +58,34 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("sesion", JSON.stringify(empleadoLogueado));
           this._compartidoService.emitirLogueo(true);
           this._router.navigate(["/perfil-empleado"]);
+        } else {
+          this.loginCorrecto =
+            "Los datos ingresados son incorrectos. Pruebe nuevamente.";
+        }
+      },
+      error => {
+        if (error != null) {
+          console.log(error);
+        }
+      }
+    );
+  }
+
+  loginEmpresa() {
+    this._empresaService.login(this.empresa).subscribe(
+      (response: any) => {
+        if (response.empresa) {
+          let empresaLogueada = new Empresa(
+            response.empresa._id,
+            response.empresa.razonSocial,
+            response.empresa.nit,
+            response.empresa.password,
+            response.empresa.role
+          );
+
+          localStorage.setItem("sesion", JSON.stringify(empresaLogueada));
+          this._compartidoService.emitirLogueoEmpresa(true);
+          this._router.navigate(["/perfil-empresa"]);
         } else {
           this.loginCorrecto =
             "Los datos ingresados son incorrectos. Pruebe nuevamente.";

@@ -22,31 +22,18 @@ export class InformacionEmpleadoComponent implements OnInit {
   }
 
 
-  obtener(){
-    this._httpClientService.afiliar(this.persona).subscribe(
-      (response: any) => {
-        console.log(response)
+  // obtener(){
+  //   this._httpClientService.afiliar
+    
+    
+  //   (this.persona).subscribe(
+  //     (response: any) => {
+  //       console.log(response)
         
-      }, err => {
-        console.log(err)
-      }
-    )
-  }
-  actualizar(){
-    this._httpClientService.actualizar(this.persona._id, this.persona).subscribe(
-      (response : any ) => {
-        if(response.persona){
-          this.actualizacionCorrecta = "Datos actualizados correctamente";
-          this.persona = response.persona;
-          localStorage.setItem("sesion", JSON.stringify(this.persona));
-        }else{
-          this.actualizacionCorrecta = "Los datos no se actualizaron, por favor inténtalo de nuevo";
-        }
-      }, error => {
-        if(error != null){
-          console.log(error)
-        }
-      }
-    )
-  }
+  //     }, err => {
+  //       console.log(err)
+  //     }
+  //   )
+  // }
+ 
 }

@@ -71,7 +71,6 @@ export class HttpClientService {
     let options = {
       headers: new HttpHeaders(
         {'Content-Type': 'application/json'})};
-        console.log(this.url)
     return this._http.get(
       this.url + 'usuario/' + id, 
       options

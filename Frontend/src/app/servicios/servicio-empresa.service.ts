@@ -12,7 +12,9 @@ export class ServicioEmpresaService {
 
   constructor(private _http: HttpClient) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.empresa = JSON.parse(localStorage.getItem("sesion"))
+  }
 
   registrar(empresa) {
     let params = JSON.stringify(empresa);
@@ -43,4 +45,6 @@ export class ServicioEmpresaService {
       .put(this.url + "empresa/" + id, params, options)
       .pipe(map(res => res));
   }
+
+
 }

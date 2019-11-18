@@ -13,16 +13,23 @@
     <!--Menú links-->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="d-flex flex-row ">
-        <a class="nav-item btn btn-success mr-2" href="login-empleado">Personas</a>
-        <a class="nav-item btn btn-success" href="login-empresa">Empresas</a>
+        <a [routerLink]="['/login']" class="ml-auto" *ngIf="!empleadoLogueado" class="nav-item btn btn-success mr-2" href="login">Personas</a>
+        <a class="nav-item btn btn-success" href="login-empresa" [routerLink]="['/login-empresa']" *ngIf="!empresaLogueada">Empresas</a>
       </div>
 
       <div class="navbar-nav ml-auto text-center ">
-
         <a class="nav-item nav-link aText" href="afiliate"> Afiliación </a>
         <a class="nav-item nav-link aText" href="inversion"> Inversiones </a>
         <a class="nav-item nav-link aText" href="cesantias"> Cesantías </a>
         <a class="nav-item nav-link aText" href="pension"> Pensiones </a>
+        <a [routerLink]=""  (click)="cerrarSesion()" class="nav-link aText" *ngIf="empleadoLogueado">
+            <i class="far fa-user"></i>
+            Cerrar sesion
+          </a>
+          <a [routerLink]=""  (click)="cerrarSesionEmpresa()" class="nav-link aText" *ngIf="empresaLogueada">
+            <i class="far fa-user"></i>
+            Cerrar sesion
+          </a>
 
       </div>
     </div>

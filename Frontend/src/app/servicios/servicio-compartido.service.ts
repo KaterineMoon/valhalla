@@ -9,13 +9,15 @@ export class ServicioCompartidoService {
 
   public logue = new Subject<any>();
   public logueEmitido = this.logue.asObservable();
-  emitirLogueo(usuarioLogueado:any){
-    this.logue.next(usuarioLogueado);
+  emitirLogueo(empleadoLogueado:any){
+    this.logue.next(empleadoLogueado);
   }
 
-  public logueEmpresa = new Subject<any>();
-  public logueEmpresaEmitido = this.logueEmpresa.asObservable();
+  public logueE= new Subject<any>();
+
+  public logueEmitidoEmpresa=this.logueE.asObservable();
   emitirLogueoEmpresa(empresaLogueada:any){
-    this.logue.next(empresaLogueada);
+    this.logueE.next(empresaLogueada);
   }
+
 }
