@@ -13,25 +13,10 @@
         <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empleado.password"
           required /><br /><br />
         <button class="btn btn-primary" type="submit">Ingresar</button>
-        <a class="btn btn-outline-primary ml-3">Afíliate</a> <br /><br />
+        <a class="btn btn-outline-primary ml-3" href="nuevo-empleado">Regístrate</a> <br /><br />
         <div *ngIf="loginCorrecto" class="alert alert-danger">
           {{ loginCorrecto }}
         </div>
       </form>
     </div>
   </div>
-
-   <!-- <form class="col-6" #f="ngForm" (ngSubmit)="loginEmpresa()" ngNativeValidate>
-        <br>
-        <h1>Ingreso de Empresas</h1><br>
-        <p>NIT</p>
-        <input type="number" class="form-control" #nit="ngModel" name="nit" [(ngModel)]="empresa.nit" required><br>
-        <p>Contraseña</p>
-        <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="empresa.password"
-            required><br><br>
-        <button type="submit" class="btn btn-info">Ingresar</button>
-        <div *ngIf="loginCorrecto" class="alert alert-danger">
-            {{loginCorrecto}}
-        </div>
-    </form> -->
-</div>

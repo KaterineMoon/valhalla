@@ -14,7 +14,6 @@ export class ServicioCompartidoService {
   }
 
   public logueE= new Subject<any>();
-
   public logueEmitidoEmpresa=this.logueE.asObservable();
   emitirLogueoEmpresa(empresaLogueada:any){
     this.logueE.next(empresaLogueada);

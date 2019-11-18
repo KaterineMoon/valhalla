@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Empresa } from "src/app/modelos/empresa";
-import { HttpClientService } from "../../servicios/http-client.service";
 import { ServicioEmpresaService } from "../../servicios/servicio-empresa.service";
 import { ServicioCompartidoService } from "../../servicios/servicio-compartido.service";
 import { Router, ActivatedRoute, Params } from "@angular/router";

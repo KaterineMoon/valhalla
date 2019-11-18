@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Empleado } from "../../modelos/empleado";
-import { Empresa } from "src/app/modelos/empresa";
 import { HttpClientService } from "../../servicios/http-client.service";
 import { ServicioEmpresaService } from "../../servicios/servicio-empresa.service";
 import { ServicioCompartidoService } from "../../servicios/servicio-compartido.service";
@@ -13,7 +12,6 @@ import { Router, ActivatedRoute, Params } from "@angular/router";
 })
 export class LoginComponent implements OnInit, OnDestroy {
   empleado: Empleado;
-  empresa: Empresa;
   loginCorrecto;
 
   constructor(
@@ -26,7 +24,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       this._router.navigate(["/perfil-empleado"]);
     }
     this.empleado = new Empleado("","","",null,"",null,"","","",null,"", null,"",null,"");
-    this.empresa = new Empresa("", "", null, "", "");
   }
 
   ngOnInit() { }
@@ -58,34 +55,6 @@ export class LoginComponent implements OnInit, OnDestroy {
           localStorage.setItem("sesion", JSON.stringify(empleadoLogueado));
           this._compartidoService.emitirLogueo(true);
           this._router.navigate(["/perfil-empleado"]);
-        } else {
-          this.loginCorrecto =
-            "Los datos ingresados son incorrectos. Pruebe nuevamente.";
-        }
-      },
-      error => {
-        if (error != null) {
-          console.log(error);
-        }
-      }
-    );
-  }
-
-  loginEmpresa() {
-    this._empresaService.login(this.empresa).subscribe(
-      (response: any) => {
-        if (response.empresa) {
-          let empresaLogueada = new Empresa(
-            response.empresa._id,
-            response.empresa.razonSocial,
-            response.empresa.nit,
-            response.empresa.password,
-            response.empresa.role
-          );
-
-          localStorage.setItem("sesion", JSON.stringify(empresaLogueada));
-          this._compartidoService.emitirLogueoEmpresa(true);
-          this._router.navigate(["/perfil-empresa"]);
         } else {
           this.loginCorrecto =
             "Los datos ingresados son incorrectos. Pruebe nuevamente.";
