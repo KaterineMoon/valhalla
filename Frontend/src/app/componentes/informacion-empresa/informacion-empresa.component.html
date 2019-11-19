@@ -1,27 +1,46 @@
 <div style="height: 70px;"></div>
-<div class="card col-6">
-    <form #updateForm="ngForm" (ngSubmit)="actualizar()" ngNativeValidate>
-        <h1>Actualizar mis datos</h1>
+<div class="row my-4 text-white">
+    <div class="card mx-3 col-5">
+        <form #updateForm="ngForm" (ngSubmit)="actualizar()" ngNativeValidate>
+            <h1>Actualizar mis datos</h1>
 
-        <p>Nombre:
-            <input type="text" class="form-control" name="razonSocial" #razonSocial="ngModel"
-                [(ngModel)]="empresa.razonSocial" required>
-        </p>
+            <p>Nombre:
+                <input type="text" class="form-control" name="razonSocial" #razonSocial="ngModel"
+                    [(ngModel)]="empresa.razonSocial" required>
+            </p>
 
-        <p>Nit:
-            <input type="text" class="form-control" #nombre="ngModel" name="nit" [(ngModel)]="empresa.nit" required>
-        </p>
+            <p>Nit:
+                <input type="text" class="form-control" #nombre="ngModel" name="nit" [(ngModel)]="empresa.nit" required>
+            </p>
 
-        <p>Password:
-            <input type="password" class="form-control" #password="ngModel" name="password"
-                [(ngModel)]="empresa.password" required>
-        </p>
+            <p>Password:
+                <input type="password" class="form-control" #password="ngModel" name="password"
+                    [(ngModel)]="empresa.password" required>
+            </p>
 
 
-        <button type="submit" class="btn btn-success">Actualizar Datos</button>
-        <br><br>
-        <div *ngIf="actualizacionCorrecta" class="alert alert-danger">
-            {{actualizacionCorrecta}}
+            <button type="submit" class="btn btn-success">Actualizar Datos</button>
+            <br><br>
+            <div *ngIf="actualizacionCorrecta" class="alert alert-danger">
+                {{actualizacionCorrecta}}
+            </div>
+        </form>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">Gracias por confiar en nosotros para que tus empleados
+                    tengan los mejores rendimientos de sus ahorros y los mejores beneficios
+                    del mercado.
+
+                    <br>
+                    <br>
+                    <br>
+
+                    No dudes en contactarnos a nuestro correo valhalla_gofire@gmail.com. Atenderemos
+                    todas tus inquietudes y solicitudes
+                </p>
+            </div>
         </div>
-    </form>
+    </div>
 </div>

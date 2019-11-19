@@ -36,7 +36,7 @@ constructor(
           "  ",
           "  ",
           "  ",
-          "el señor PEPITO PEREZ con cédula de ciudadania número 123456789 de Bogotá figura como afiliado a la sociedad administradora de pensiones y cesantias Valhalla desde el 22 de febrero de 2017 y su estado es activo.",
+          "El señor PEPITO PEREZ con cédula de ciudadania número 123456789 de Bogotá figura como afiliado a la sociedad administradora de pensiones y cesantias Valhalla desde el 1 de febrero de 2016 y su estado es activo.",
           " ",
           " Se expide el siguiente certificado a solicitud del afiliado el día 18 de noviembre de 2019.",
           " ",

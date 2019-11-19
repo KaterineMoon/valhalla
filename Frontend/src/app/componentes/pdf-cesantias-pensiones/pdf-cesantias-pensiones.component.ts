@@ -36,7 +36,7 @@ constructor(
           "CC 12345678",
           "  ",
           "  ",
-          "Los siguientes datos son la relaión de su cuenta de aportes realizados y consolodidado de ahorro hasta el día de hoy.",
+          "Los siguientes datos son la relación de su cuenta de aportes realizados y consolidado de ahorro hasta el día de hoy.",
           "  ",
           "  ",
           "  ",
@@ -51,7 +51,7 @@ constructor(
               widths: [ '*', 'auto', 100, '*' ],
               body: [
                 [ 'Fondo de Pensiones', 'Saldo ahorro   ', 'Fondo de Cesantias   ', 'Saldo Ahorro   '],
-                [ 'Valhalla', '$15.000.000', 'Valhalla', '$4.000.000' ]
+                [ 'Porvenir', '$21.000.000', 'Porvenir', '$8.000.000' ]
               ]
             }
           },              
